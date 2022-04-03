@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
             }
         )
 
+
         // 리스너 연결
         binding.bottomNavigationView.setOnItemSelectedListener(this)
     }
