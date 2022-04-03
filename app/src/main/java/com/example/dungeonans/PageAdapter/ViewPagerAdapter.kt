@@ -12,6 +12,7 @@ import com.example.dungeonans.Fragment.MyProfileFragment
 
 class ViewPagerAdapter(fm : FragmentActivity) : FragmentStateAdapter(fm) {
     override fun getItemCount(): Int = 4
+    // 뷰페이저 어댑터
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {

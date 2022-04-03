@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
                 binding.pager.currentItem = 3
                 return true
             }
+            // 나머지 => 반환 안됨.
             else -> {
                 return false
             }
