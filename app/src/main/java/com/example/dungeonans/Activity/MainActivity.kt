@@ -1,7 +1,8 @@
-package com.example.dungeonans
+package com.example.dungeonans.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.dungeonans.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
