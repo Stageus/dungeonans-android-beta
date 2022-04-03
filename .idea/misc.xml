@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< Updated upstream
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/menu_selector_color.xml" value="0.1245" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/action_bar.xml" value="0.22" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/actionbar.xml" value="0.21666666666666667" />
@@ -18,6 +19,9 @@
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.22" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/menu/menu_selector_color.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/menu/top_nav_menu.xml" value="0.35520833333333335" />
+=======
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/activity_main.xml" value="0.17274569402228976" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>

@@ -2,12 +2,12 @@ package com.example.dungeonans.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import androidx.viewpager2.widget.ViewPager2
 import com.example.dungeonans.PageAdapter.ViewPagerAdapter
 import com.example.dungeonans.R
 import com.example.dungeonans.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import androidx.appcompat.widget.Toolbar
 
@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         super.onCreate(savedInstanceState)
         startbinding()
         connectToolbar()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu,menu)
+        return true
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -76,5 +81,6 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         actionBar!!.setDisplayShowCustomEnabled(true)
         actionBar!!.setDisplayShowTitleEnabled(false)
         actionBar!!.setDisplayHomeAsUpEnabled(false)
+        actionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 }
