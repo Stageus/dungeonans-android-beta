@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/menu_selector_color.xml" value="0.1245" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/action_bar.xml" value="0.22" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/actionbar.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/blogpage_fragment.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/communitypage_fragment.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/fragment_askpage.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/fragment_blogpage.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/fragment_communityfragment.xml" value="0.35520833333333335" />
@@ -14,6 +17,7 @@
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/myprofilepage_fragment.xml" value="0.18020833333333333" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.22" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/menu/menu_selector_color.xml" value="0.35520833333333335" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/menu/top_nav_menu.xml" value="0.35520833333333335" />
       </map>
     </option>
   </component>

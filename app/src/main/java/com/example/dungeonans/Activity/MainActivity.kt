@@ -9,34 +9,16 @@ import com.example.dungeonans.R
 import com.example.dungeonans.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
+import androidx.appcompat.widget.Toolbar
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        // 페이저에 어댑터 연결
-        binding.pager.adapter = ViewPagerAdapter(this)
-
-        // 슬라이드하여 페이지가 변경되면 바텀네비게이션의 탭도 그 페이지로 활성화
-        binding.pager.registerOnPageChangeCallback(
-            object : ViewPager2.OnPageChangeCallback() {
-
-                override fun onPageSelected(position: Int) {
-                    super.onPageSelected(position)
-                    binding.bottomNavigationView.menu.getItem(position).isChecked = true
-                }
-            }
-        )
-
-
-        // 리스너 연결
-        binding.bottomNavigationView.setOnItemSelectedListener(this)
+        startbinding()
+        connectToolbar()
     }
-
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
@@ -64,5 +46,35 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
                 return false
             }
         }
+    }
+
+
+    fun startbinding() {
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // 페이저에 어댑터 연결
+        binding.pager.adapter = ViewPagerAdapter(this)
+
+        // 슬라이드하여 페이지가 변경되면 바텀네비게이션의 탭도 그 페이지로 활성화
+        binding.pager.registerOnPageChangeCallback(
+            object : ViewPager2.OnPageChangeCallback() {
+
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    binding.bottomNavigationView.menu.getItem(position).isChecked = true
+                }
+            }
+        )
+        // 리스너 연결
+        binding.bottomNavigationView.setOnItemSelectedListener(this)
+    }
+    fun connectToolbar() {
+        var toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        var actionBar = supportActionBar
+        actionBar!!.setDisplayShowCustomEnabled(true)
+        actionBar!!.setDisplayShowTitleEnabled(false)
+        actionBar!!.setDisplayHomeAsUpEnabled(false)
     }
 }
