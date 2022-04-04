@@ -5,13 +5,13 @@
         android:id="@+id/action_search"
         android:title="검색"
         android:orderInCategory="100"
-        android:icon="@drawable/lang_cpp_icon"
+        android:icon="@drawable/search_btn_icon"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_share"
         android:title="공유"
         android:orderInCategory="100"
-        android:icon="@drawable/lang_cpp_icon"
+        android:icon="@drawable/notice_icon"
         app:showAsAction="ifRoom" />
 </menu>

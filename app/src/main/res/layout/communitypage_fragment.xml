@@ -26,9 +26,11 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
                 <Button
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/tag_icon"/>
 
                 <Button
                     android:layout_width="70dp"
