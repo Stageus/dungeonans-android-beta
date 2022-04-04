@@ -6,12 +6,12 @@
         android:title="검색"
         android:orderInCategory="100"
         android:icon="@drawable/lang_cpp_icon"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_share"
         android:title="공유"
         android:orderInCategory="100"
         android:icon="@drawable/lang_cpp_icon"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 </menu>

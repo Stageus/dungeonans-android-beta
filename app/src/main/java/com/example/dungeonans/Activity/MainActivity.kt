@@ -2,6 +2,7 @@ package com.example.dungeonans.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.viewpager2.widget.ViewPager2
@@ -53,6 +54,22 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         }
     }
 
+    // 이벤트 동작 안됨
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_search -> {
+                Log.d("tag", "search")
+                true
+            }
+            R.id.action_share -> {
+                Log.d("tag", "share")
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+    //
+
 
     fun startbinding() {
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -74,13 +91,16 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         // 리스너 연결
         binding.bottomNavigationView.setOnItemSelectedListener(this)
     }
+
     fun connectToolbar() {
         var toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         var actionBar = supportActionBar
         actionBar!!.setDisplayShowCustomEnabled(true)
         actionBar!!.setDisplayShowTitleEnabled(false)
-        actionBar!!.setDisplayHomeAsUpEnabled(false)
+
+        //좌측 버튼 활성화 => 로고로 바꿀것.
         actionBar!!.setDisplayHomeAsUpEnabled(true)
+
     }
 }
