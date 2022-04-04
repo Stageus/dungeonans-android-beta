@@ -5,12 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Activity.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/toolbar"
         app:menu="@menu/toolbar_menu"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -19,7 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="20dp"
-            android:text="Title">
+            android:text="Title"
+            android:textColor="@color/black">
         </TextView>
     </androidx.appcompat.widget.Toolbar>
 
@@ -27,6 +30,7 @@
         android:id="@+id/mainActivityPostingLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/topstroke"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
@@ -48,6 +52,7 @@
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:text="당신의 개발 이야기를 들려주세요!"
+            android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -71,9 +76,90 @@
             android:layout_marginRight="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/hashtagHorizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/lightGrey"
+        app:layout_constraintTop_toBottomOf="@+id/mainActivityPostingLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"/>
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/hashtagshape"
+                android:text="#개발"
+                android:textColor="@color/black"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/hashtagshape"
+                android:text="#개발"
+                android:textColor="@color/black"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/hashtagshape"
+                android:text="#개발"
+                android:textColor="@color/black"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/hashtagshape"
+                android:text="#개발"
+                android:textColor="@color/black"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/hashtagshape"
+                android:text="#개발"
+                android:textColor="@color/black"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/hashtagshape"
+                android:text="#개발"
+                android:textColor="@color/black"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/hashtagshape"
+                android:text="#개발"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+
+
+
+
+
+    </HorizontalScrollView>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
@@ -83,7 +169,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hashtagHorizontalScrollView"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -93,5 +179,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_menu"/>
+        app:menu="@menu/bottom_navigation_menu"
+        android:background="@color/white"
+        app:itemTextColor="@drawable/menu_selector_color"
+        app:itemIconTint="@drawable/menu_selector_color"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
