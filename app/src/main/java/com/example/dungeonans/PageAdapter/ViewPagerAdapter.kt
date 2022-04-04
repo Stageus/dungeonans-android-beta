@@ -1,5 +1,6 @@
 package com.example.dungeonans.PageAdapter
 
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
@@ -21,5 +22,6 @@ class ViewPagerAdapter(fm : FragmentActivity) : FragmentStateAdapter(fm) {
             2 -> BlogFragment()
             else -> MyProfileFragment()
         }
+        Log.d("tag","$position")
     }
 }
