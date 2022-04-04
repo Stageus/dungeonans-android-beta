@@ -1,12 +1,527 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@color/white">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/mainLayout">
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:id="@+id/hashtagHorizontalScrollView"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+
+            android:layout_height="wrap_content"
+            android:background="@color/lightGrey"
+            app:layout_constraintTop_toBottomOf="@+id/mainActivityPostingLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/hashtagshape"
+                    android:text="#개발"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:columnCount="3"
+            android:rowCount="3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="35dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/hashtagYellow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="노션 배우기(3)"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="안녕하세요. 김주영입니다. 오늘은 노션 배우기 세 번째 시간인데
+요. 이건 어차피 아무말이니까 무시하셔도 됩니다. 노션은 어떻게."
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="by 김주영주영(@juyoung_12)"
+                        android:textSize="10sp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/lang_html_round_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notion"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                        app:layout_constraintStart_toEndOf="@+id/imageView3"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="35dp"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/hashtagYellow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="노션 배우기(3)"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="안녕하세요. 김주영입니다. 오늘은 노션 배우기 세 번째 시간인데
+요. 이건 어차피 아무말이니까 무시하셔도 됩니다. 노션은 어떻게."
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="by 김주영주영(@juyoung_12)"
+                        android:textSize="10sp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/lang_html_round_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notion"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                        app:layout_constraintStart_toEndOf="@+id/imageView5"
+                        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="35dp"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/hashtagYellow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="노션 배우기(3)"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+                    <TextView
+                        android:id="@+id/textView124516"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="안녕하세요. 김주영입니다. 오늘은 노션 배우기 세 번째 시간인데
+요. 이건 어차피 아무말이니까 무시하셔도 됩니다. 노션은 어떻게."
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView12512"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtx" />
+
+                    <TextView
+                        android:id="@+id/textView12512"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="by 김주영주영(@juyoung_12)"
+                        android:textSize="10sp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/lang_html_round_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notion"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                        app:layout_constraintStart_toEndOf="@+id/imageView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="35dp"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView61924"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@color/hashtagYellow"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/adadad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="노션 배우기(3)"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView61924" />
+
+                    <TextView
+                        android:id="@+id/dadfadfsdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="안녕하세요. 김주영입니다. 오늘은 노션 배우기 세 번째 시간인데
+요. 이건 어차피 아무말이니까 무시하셔도 됩니다. 노션은 어떻게."
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/adadad" />
+
+                    <TextView
+                        android:id="@+id/adadad114142"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="by 김주영주영(@juyoung_12)"
+                        android:textSize="10sp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/adfadfsfq4124"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:background="@drawable/lang_html_round_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView61924"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notion"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView61924"
+                        app:layout_constraintStart_toEndOf="@+id/adfadfsfq4124"
+                        app:layout_constraintTop_toTopOf="@+id/imageView61924" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+
+
 
 
     </LinearLayout>

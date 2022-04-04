@@ -51,4 +51,7 @@ dependencies {
 
     // viewpager
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    // cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
 }
