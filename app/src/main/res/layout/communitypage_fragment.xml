@@ -25,12 +25,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
-                <Button
+                <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/tag_icon"/>
+                    android:background="@drawable/tagbar_tag_icon"/>
 
                 <Button
                     android:layout_width="70dp"
@@ -46,7 +46,7 @@
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:text="#유머"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
@@ -54,7 +54,7 @@
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:text="#모임"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
@@ -62,7 +62,7 @@
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:text="#삽질"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
@@ -70,7 +70,7 @@
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:text="#게임"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
@@ -78,7 +78,7 @@
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:text="#과제"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
@@ -86,7 +86,7 @@
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
                     android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:text="#하교"
                     android:textColor="@color/black"/>
             </LinearLayout>
         </HorizontalScrollView>

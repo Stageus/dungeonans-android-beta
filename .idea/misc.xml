@@ -3,12 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/androidtag.xml" value="0.166" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/app_logo_xml.xml" value="0.166" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/app_title_xml.xml" value="0.166" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/cpptag.xml" value="0.166" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/djangotag.xml" value="0.166" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/ic_launcher_background.xml" value="0.166" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/login_text_stroke.xml" value="0.166" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/menu_selector_color.xml" value="0.166" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/pythontag.xml" value="0.166" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/swifttag.xml" value="0.166" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/drawable/topstroke.xml" value="0.136" />
-        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/askpage_fragment.xml" value="0.10235507246376811" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/activity_main.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/askpage_fragment.xml" value="0.21839940164547494" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/blogpage_fragment.xml" value="0.22" />
-        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/communitypage_fragment.xml" value="0.2220496894409938" />
+        <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/communitypage_fragment.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/layout/loginpage_fragment.xml" value="0.35520833333333335" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.26481481481481484" />
         <entry key="..\:/Users/dydwn/Desktop/dungeonans/app/src/main/res/menu/toolbar_menu.xml" value="0.26481481481481484" />
@@ -21,9 +30,10 @@
         <entry key="app/src/main/res/layout/askpage_fragment.xml" value="0.3836578369140625" />
         <entry key="app/src/main/res/layout/blogpage_fragment.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/communitypage_fragment.xml" value="0.234375" />
-        <entry key="app/src/main/res/layout/loginpage_fragment.xml" value="0.24031280517578127" />
+        <entry key="app/src/main/res/layout/loginpage_fragment.xml" value="0.27442413330078125" />
         <entry key="app/src/main/res/layout/myprofilepage_fragment.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/noticepage_activity.xml" value="0.234375" />
+        <entry key="app/src/main/res/layout/registerpage_fragment.xml" value="0.19583333333333333" />
         <entry key="app/src/main/res/layout/test.xml" value="0.25833333333333336" />
       </map>
     </option>
