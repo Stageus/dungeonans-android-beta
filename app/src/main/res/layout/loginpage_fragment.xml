@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MainActivity">
+    tools:context=".Activity.LoginActivity">
 
 
     <LinearLayout
@@ -25,13 +25,13 @@
             android:id="@+id/appLogoIV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/app_logo" />
+            android:src="@drawable/app_logo_xml" />
 
         <ImageView
             android:id="@+id/appTitleIV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/app_title" />
+            android:src="@drawable/app_title_xml" />
     </LinearLayout>
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="55dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:text="아이디"
         android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -134,13 +134,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registerBtn"
         android:gravity="center"
-        android:weightSum="4">
+        android:weightSum="6">
         <ImageButton
             android:id="@+id/login_page_google_login_btn"
             android:layout_width="0dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="20dp"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_google_login"
+            android:layout_weight="1.5"/>
+
+        <ImageButton
+            android:id="@+id/login_page_kakao_login_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_kakao_login"
             android:layout_weight="1.5"/>
 
         <ImageButton
