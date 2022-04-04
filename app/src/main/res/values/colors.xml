@@ -36,5 +36,6 @@
     <color name="goClicked">#B5F0FF</color>
     <color name="scalaClicked">#FFC9C9</color>
     <color name="hashtagClicked">#8490F4</color>
+    <color name="transparent">#00000000</color>
 
 </resources>

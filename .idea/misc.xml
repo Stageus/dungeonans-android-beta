@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/app_logo_xml.xml" value="0.2205" />
         <entry key="app/src/main/res/drawable/app_title_xml.xml" value="0.2205" />
+        <entry key="app/src/main/res/drawable/grey_rounded_box.xml" value="0.32" />
         <entry key="app/src/main/res/drawable/hashtagclicked.xml" value="0.196" />
         <entry key="app/src/main/res/drawable/login_text_stroke.xml" value="0.196" />
         <entry key="app/src/main/res/drawable/menu_selector_color.xml" value="0.196" />
@@ -15,7 +16,7 @@
         <entry key="app/src/main/res/layout/loginpage_fragment.xml" value="0.27442413330078125" />
         <entry key="app/src/main/res/layout/myprofilepage_fragment.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/noticepage_activity.xml" value="0.234375" />
-        <entry key="app/src/main/res/layout/registerpage_fragment.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout/registerpage_fragment.xml" value="0.493914794921875" />
         <entry key="app/src/main/res/layout/test.xml" value="0.25833333333333336" />
       </map>
     </option>
