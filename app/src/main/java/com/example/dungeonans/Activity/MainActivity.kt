@@ -30,33 +30,28 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         var topbar = findViewById<ConstraintLayout>(R.id.mainActivityPostingLayout)
-        var scrollview = findViewById<HorizontalScrollView>(R.id.hashtagHorizontalScrollView)
         when(item.itemId){
             R.id.nav_Community -> {
                 // ViewPager의 현재 item에 첫 번째 화면을 대입
                 binding.pager.currentItem = 0
                 topbar.visibility = View.VISIBLE
-                scrollview.visibility = View.VISIBLE
                 return true
             }
             R.id.nav_Ask -> {
                 // ViewPager의 현재 item에 두 번째 화면을 대입
                 binding.pager.currentItem = 1
                 topbar.visibility = View.VISIBLE
-                scrollview.visibility = View.VISIBLE
                 return true
             }
             R.id.nav_Blog -> {
                 // ViewPager의 현재 item에 세 번째 화면을 대입
                 binding.pager.currentItem = 2
                 topbar.visibility = View.VISIBLE
-                scrollview.visibility = View.VISIBLE
                 return true
             }
             R.id.nav_MyProfile -> {
                 binding.pager.currentItem = 3
                 topbar.visibility = View.GONE
-                scrollview.visibility = View.GONE
                 return true
             }
             // 나머지 => 반환 안됨.
