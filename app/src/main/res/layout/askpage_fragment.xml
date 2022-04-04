@@ -31,145 +31,122 @@
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
+                    android:background="@drawable/pythontag"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/kotlintag"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/androidtag"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/htmltag"
+                    android:textColor="@color/black"/>
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/csstag"
+                    android:textColor="@color/black"/>
 
-                    android:text="#개발"
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/jstag"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/djangotag"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:background="@drawable/javatag"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/cpptag"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:background="@drawable/sqltag"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:background="@drawable/rtag"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:background="@drawable/phptag"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:background="@drawable/swifttag"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:background="@drawable/csharptag"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:background="@drawable/gotag"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:background="@drawable/scalatag"
                     android:textColor="@color/black"/>
                 <Button
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
-                    android:textColor="@color/black"/>
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
-                    android:textColor="@color/black"/>
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
-                    android:textColor="@color/black"/>
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
-                    android:textColor="@color/black"/>
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
-                    android:textColor="@color/black"/>
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
-                    android:textColor="@color/black"/>
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
-                    android:textColor="@color/black"/>
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
-                    android:textColor="@color/black"/>
-                <Button
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/hashtagshape"
-                    android:text="#개발"
+                    android:background="@drawable/darttag"
                     android:textColor="@color/black"/>
             </LinearLayout>
         </HorizontalScrollView>
@@ -188,6 +165,16 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="전체보기버튼"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
@@ -211,6 +198,7 @@
             android:layout_height="250dp">
 
             <TextView
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -219,6 +207,16 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="전체보기버튼"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
