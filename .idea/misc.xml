@@ -18,8 +18,11 @@
         <entry key="app/src/main/res/layout/myprofilepage_fragment.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/noticepage_activity.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/register_confirmpage_fragment.xml" value="0.314788818359375" />
+        <entry key="app/src/main/res/layout/register_userpage_fragment.xml" value="0.29585292860196666" />
         <entry key="app/src/main/res/layout/registerpage_fragment.xml" value="0.26663360595703134" />
         <entry key="app/src/main/res/layout/test.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1611799914493373" />
+        <entry key="app/src/main/res/menu/toolbar_menu.xml" value="0.1611799914493373" />
       </map>
     </option>
   </component>
