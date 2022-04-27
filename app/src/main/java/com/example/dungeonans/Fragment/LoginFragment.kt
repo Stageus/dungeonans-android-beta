@@ -1,5 +1,6 @@
 package com.example.dungeonans.Fragment
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,7 +17,14 @@ import com.example.dungeonans.R
 
 class LoginFragment : Fragment() {
 
-    private val loginActivity = activity as LoginActivity
+    private lateinit var loginActivity : LoginActivity
+
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        loginActivity = activity as LoginActivity
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,8 +56,6 @@ class LoginFragment : Fragment() {
             findExistingAccountEvent() // 계정찾기 다이어로그
         }
 
-
-
     return view
     }
 
@@ -71,6 +77,7 @@ class LoginFragment : Fragment() {
     private fun findExistingAccountEvent() {
         AlertDialog.Builder(loginActivity)
             .setView(R.layout.findaccount_dialog_layout)
+            .setCancelable(true)
             .show()
             .also { alertDialog ->
 

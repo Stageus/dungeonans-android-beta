@@ -1,8 +1,10 @@
 package com.example.dungeonans.Activity
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.AttributeSet
 import android.view.View
 import android.widget.*
@@ -12,6 +14,8 @@ import com.example.dungeonans.Fragment.FindIdFragment
 import com.example.dungeonans.Fragment.FindPwFragment
 import com.example.dungeonans.Fragment.LoginFragment
 import com.example.dungeonans.R
+import java.util.*
+import kotlin.math.roundToInt
 
 class LoginActivity : AppCompatActivity() {
 
@@ -48,16 +52,13 @@ class LoginActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-
-
-
     fun showToastEvent(text : String, isShort : Boolean) {
         if (isShort) {
             Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this, text, Toast.LENGTH_LONG).show()
         }
-
     }
+
 
 }
