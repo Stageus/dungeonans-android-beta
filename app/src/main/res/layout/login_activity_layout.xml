@@ -6,7 +6,7 @@
     android:background="@drawable/login_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.LoginActivity">
+    tools:context=".Activity.AccountActivity">
 
     <ImageView
         android:id="@+id/appLogoIV"
@@ -38,7 +38,7 @@
             android:background="@drawable/login_text_stroke"
             android:layout_weight="1.5"
             android:hint="아이디"
-            android:textColorHint="@color/gray"
+            android:textColorHint="@color/grey"
             android:textSize="15sp"
             android:paddingLeft="15dp"
             android:inputType="text"
@@ -55,7 +55,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/login_text_stroke"
             android:hint="비밀번호"
-            android:textColorHint="@color/gray"
+            android:textColorHint="@color/grey"
             android:textSize="15sp"
             android:paddingLeft="15dp"
             android:selectAllOnFocus="true"
@@ -86,6 +86,7 @@
             android:layout_marginLeft="40dp"
             android:gravity="top">
             <Button
+                android:id="@+id/findAccountBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_marginStart="10dp"
