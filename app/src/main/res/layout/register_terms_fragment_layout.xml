@@ -6,6 +6,7 @@
     android:orientation="vertical"
     android:paddingTop="10dp">
     <ImageButton
+        android:id="@+id/backPageBtn"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
@@ -51,8 +52,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:gravity="center_horizontal"
                 android:orientation="horizontal">
                 <CheckBox
+                    android:id="@+id/term1CheckBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"/>
@@ -62,6 +66,7 @@
                     android:text="서비스 이용약관 동의"
                     android:layout_weight="20"/>
                 <Button
+                    android:id="@+id/term1DetailBtn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="6"
@@ -79,6 +84,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <CheckBox
+                    android:id="@+id/term2CheckBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"/>
@@ -88,6 +94,7 @@
                     android:text="개인정보보호를 위한 이용자 동의"
                     android:layout_weight="20"/>
                 <Button
+                    android:id="@+id/term2DetailBtn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="6"
@@ -103,15 +110,16 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
                 <CheckBox
+                    android:id="@+id/term3CheckBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:text="만 14세 이상입니다."
                     android:layout_weight="20"/>
             </LinearLayout>
@@ -122,6 +130,7 @@
                 android:paddingBottom="30dp"
                 android:orientation="horizontal">
                 <CheckBox
+                    android:id="@+id/term4CheckBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"/>
@@ -135,6 +144,7 @@
 
     </ScrollView>
     <Button
+        android:id="@+id/nextPageBtn"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:text="다음"
@@ -143,9 +153,5 @@
         android:textColor="@color/white"
         android:background="@drawable/register_next_page_btn"
         android:layout_weight="0.2"/>
-
-
-
-
 
 </LinearLayout>
