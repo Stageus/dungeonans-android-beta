@@ -22,7 +22,7 @@ class RegisterTermsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.registerpage_fragment, container, false)
+        val view = inflater.inflate(R.layout.register_terms_fragment_layout, container, false)
 
         // button
         val backPageBtn = view.findViewById<Button>(R.id.backPageBtn)

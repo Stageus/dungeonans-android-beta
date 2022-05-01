@@ -52,8 +52,11 @@ dependencies {
     // viewpager
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
-    // cardview
+    // cardView
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    // codeInputView
+    implementation 'com.raycoarana.codeinputview:codeinputview:2.1.4'
 
     // 레트로핏
     def retrofit_version = "2.9.0"

@@ -28,7 +28,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun loginEvent() {
-        val loginIntent = Intent(this, MainActivity::class.java) // 회원가입 페이지로 전환
+        // 임시로 SearchActivity 로 전환
+        val loginIntent = Intent(this, SearchActivity::class.java) // 메인 페이지로 전환
         startActivity(loginIntent)
 
     }
