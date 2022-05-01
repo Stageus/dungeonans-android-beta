@@ -6,17 +6,16 @@ import android.os.Handler
 import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Config.PROFILE
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.FrameLayout
-import android.widget.ProgressBar
-import android.widget.RadioGroup
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import com.example.dungeonans.R
 import com.example.dungeonans.Retrofit.RetrofitManager
 import com.example.dungeonans.Utils.Constants.TAG
+import com.example.dungeonans.Utils.RESPONSE_STATE
 import com.example.dungeonans.Utils.SEARCH_TYPE
 import com.example.dungeonans.Utils.onMyTextChanged
 import com.google.android.material.textfield.TextInputEditText
@@ -64,8 +63,21 @@ class SearchActivity : AppCompatActivity() {
         }
 
         searchBtn.setOnClickListener {
+            Log.d(TAG, "MainActivity - 검색 버튼이 클릭되었다. / currentSearchType : $currentSearchType")
 
+            // 검색 api 호출
             RetrofitManager.instance.searchBlogs(searchTerm = searchTermEditText.toString(), completion = {
+                    responseState, responseBody ->
+
+                when(responseState) {
+                    RESPONSE_STATE.OKAY -> {
+                        Log.d(TAG, "api 호출 성공 : $responseBody")
+                    }
+                    RESPONSE_STATE.FAIL -> {
+                        Toast.makeText(this, "api 호출 에러입니다.", Toast.LENGTH_SHORT).show()
+                        Log.d(TAG, "api 호출 실패 : $responseBody")
+                    }
+                }
 
             })
             this.handleSearchBtnUi()
