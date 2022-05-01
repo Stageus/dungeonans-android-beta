@@ -3,25 +3,39 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/androidtag.xml" value="0.259" />
         <entry key="app/src/main/res/drawable/app_logo_xml.xml" value="0.2205" />
         <entry key="app/src/main/res/drawable/app_title_xml.xml" value="0.2205" />
         <entry key="app/src/main/res/drawable/grey_rounded_box.xml" value="0.32" />
         <entry key="app/src/main/res/drawable/hashtagclicked.xml" value="0.196" />
+        <entry key="app/src/main/res/drawable/languageshape.xml" value="0.227" />
         <entry key="app/src/main/res/drawable/login_text_stroke.xml" value="0.196" />
         <entry key="app/src/main/res/drawable/menu_selector_color.xml" value="0.196" />
+        <entry key="app/src/main/res/drawable/phptag.xml" value="0.227" />
+        <entry key="app/src/main/res/drawable/pythontag.xml" value="0.227" />
         <entry key="app/src/main/res/drawable/return_page_icon_xml.xml" value="0.206" />
+        <entry key="app/src/main/res/drawable/rtag.xml" value="0.227" />
+        <entry key="app/src/main/res/layout/accountpage_activity.xml" value="0.3185121846943138" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13697916666666668" />
         <entry key="app/src/main/res/layout/askpage_fragment.xml" value="0.3836578369140625" />
-        <entry key="app/src/main/res/layout/blogpage_fragment.xml" value="0.234375" />
+        <entry key="app/src/main/res/layout/blogpage_fragment.xml" value="0.20102691650390625" />
+        <entry key="app/src/main/res/layout/cardview.xml" value="0.2778965369816161" />
         <entry key="app/src/main/res/layout/communitypage_fragment.xml" value="0.234375" />
+        <entry key="app/src/main/res/layout/empty_activity_layout.xml" value="0.2778965369816161" />
+        <entry key="app/src/main/res/layout/findaccount_dialog_layout.xml" value="0.4190052405948973" />
+        <entry key="app/src/main/res/layout/findid_fragment_layout.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/layout/findpw_fragment_layout.xml" value="0.7400497512437811" />
+        <entry key="app/src/main/res/layout/layout_button_search.xml" value="0.31936725096194957" />
+        <entry key="app/src/main/res/layout/login_activity_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/loginpage_fragment.xml" value="0.41074920654296876" />
         <entry key="app/src/main/res/layout/myprofilepage_fragment.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/noticepage_activity.xml" value="0.234375" />
-        <entry key="app/src/main/res/layout/register_confirmpage_fragment.xml" value="0.314788818359375" />
+        <entry key="app/src/main/res/layout/register_confirmpage_fragment.xml" value="0.37305699481865284" />
         <entry key="app/src/main/res/layout/register_userpage_fragment.xml" value="0.29585292860196666" />
-        <entry key="app/src/main/res/layout/registerpage_fragment.xml" value="0.26663360595703134" />
+        <entry key="app/src/main/res/layout/registerpage_fragment.xml" value="0.46785714285714286" />
+        <entry key="app/src/main/res/layout/search_activity_layout.xml" value="0.28437121824710576" />
         <entry key="app/src/main/res/layout/test.xml" value="0.25833333333333336" />
-        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1611799914493373" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.49816577025793096" />
         <entry key="app/src/main/res/menu/toolbar_menu.xml" value="0.1611799914493373" />
       </map>
     </option>
