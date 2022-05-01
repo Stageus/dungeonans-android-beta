@@ -8,5 +8,11 @@
         <item>kakao.com</item>
         <item>nate.com</item>
     </string-array>
+    <string name="naver_client_id">i5ZfZ60c1qMiGOnHcYtF</string>
+    <string name="naver_client_secret">_Yd130jp5Z</string>
+
+    <string name="social_login_info_naver_client_id">i5ZfZ60c1qMiGOnHcYtF</string>
+    <string name="social_login_info_naver_client_secret">_Yd130jp5Z</string>
+    <string name="social_login_info_naver_client_name">네이버아이디 로그인</string>
 
 </resources>

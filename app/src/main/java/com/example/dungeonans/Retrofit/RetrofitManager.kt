@@ -46,7 +46,6 @@ class RetrofitManager {
                 Log.d(TAG, "RetrofitManager - onResponse() called / response : ${response.body()}")
 
                 completion(RESPONSE_STATE.OKAY ,response.body().toString())
-
             }
 
         })

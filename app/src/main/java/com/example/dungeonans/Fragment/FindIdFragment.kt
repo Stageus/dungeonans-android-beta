@@ -10,15 +10,16 @@ import android.widget.EditText
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import com.example.dungeonans.Activity.LoginActivity
+import com.example.dungeonans.Activity.MainActivity
 import com.example.dungeonans.R
 
 class FindIdFragment : Fragment() {
 
-    private lateinit var loginActivity : LoginActivity
+    private lateinit var loginActivity : MainActivity
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        loginActivity = activity as LoginActivity
+        loginActivity = activity as MainActivity
     }
 
     override fun onCreateView(
@@ -36,34 +37,34 @@ class FindIdFragment : Fragment() {
         val backPageBtn = view.findViewById<ImageButton>(R.id.backPageBtn)
         val findIdBtn = view.findViewById<Button>(R.id.findIdBtn)
 
-        findIdBtn?.setOnClickListener {
-            findIdEvent(nameET, emailET)
-        }
-
-        backPageBtn.setOnClickListener {
-            moveBackPageEvent()
-        }
+//        findIdBtn?.setOnClickListener {
+//            findIdEvent(nameET, emailET)
+//        }
+//
+//        backPageBtn.setOnClickListener {
+//            moveBackPageEvent()
+//        }
 
         return view
     }
 
-    private fun findIdEvent(nameET: EditText?, emailET: EditText?) {
-        val nameString = nameET?.text.toString()
-        val emailString = emailET?.text.toString()
-
-        if (nameString.isEmpty() || emailString.isEmpty()) {
-            loginActivity.showToastEvent("이름 또는 이메일을 입력해주세요.",true)
-        }
-        else {
-            connectLoginApi()
-        }
-    }
-
-    private fun moveBackPageEvent() {
-        loginActivity.transFragEvent(0)
-    }
-
-    fun connectLoginApi() {
-
-    }
+//    private fun findIdEvent(nameET: EditText?, emailET: EditText?) {
+//        val nameString = nameET?.text.toString()
+//        val emailString = emailET?.text.toString()
+//
+//        if (nameString.isEmpty() || emailString.isEmpty()) {
+//            loginActivity.showToastEvent("이름 또는 이메일을 입력해주세요.",true)
+//        }
+//        else {
+//            connectLoginApi()
+//        }
+//    }
+//
+//    private fun moveBackPageEvent() {
+//        loginActivity.transFragEvent(0)
+//    }
+//
+//    fun connectLoginApi() {
+//
+//    }
 }

@@ -16,6 +16,7 @@
         <entry key="app/src/main/res/drawable/return_page_icon_xml.xml" value="0.206" />
         <entry key="app/src/main/res/drawable/rtag.xml" value="0.227" />
         <entry key="app/src/main/res/layout/accountpage_activity.xml" value="0.3185121846943138" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.42800718598528137" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13697916666666668" />
         <entry key="app/src/main/res/layout/askpage_fragment.xml" value="0.3836578369140625" />
         <entry key="app/src/main/res/layout/blogpage_fragment.xml" value="0.20102691650390625" />
@@ -24,9 +25,9 @@
         <entry key="app/src/main/res/layout/empty_activity_layout.xml" value="0.2778965369816161" />
         <entry key="app/src/main/res/layout/findaccount_dialog_layout.xml" value="0.4190052405948973" />
         <entry key="app/src/main/res/layout/findid_fragment_layout.xml" value="0.33133817870884996" />
-        <entry key="app/src/main/res/layout/findpw_fragment_layout.xml" value="0.7400497512437811" />
+        <entry key="app/src/main/res/layout/findpw_fragment_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/layout_button_search.xml" value="0.31936725096194957" />
-        <entry key="app/src/main/res/layout/login_activity_layout.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/login_activity_layout.xml" value="0.5103734439834025" />
         <entry key="app/src/main/res/layout/loginpage_fragment.xml" value="0.41074920654296876" />
         <entry key="app/src/main/res/layout/myprofilepage_fragment.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/noticepage_activity.xml" value="0.234375" />
@@ -41,7 +42,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

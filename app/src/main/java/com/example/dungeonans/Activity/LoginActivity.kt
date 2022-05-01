@@ -1,65 +1,170 @@
 package com.example.dungeonans.Activity
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.CountDownTimer
-import android.util.AttributeSet
-import android.view.View
+import android.util.Log
 import android.widget.*
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.dungeonans.Fragment.FindIdFragment
 import com.example.dungeonans.Fragment.FindPwFragment
 import com.example.dungeonans.Fragment.LoginFragment
 import com.example.dungeonans.R
+import com.example.dungeonans.Utils.Constants.TAG
+import com.example.dungeonans.databinding.ActivityLoginBinding
+import com.example.dungeonans.databinding.ActivityMainBinding
+import com.navercorp.nid.NaverIdLoginSDK
+import com.navercorp.nid.oauth.NidOAuthLogin
+import com.navercorp.nid.oauth.OAuthLoginCallback
+import com.navercorp.nid.profile.NidProfileCallback
+import com.navercorp.nid.profile.data.NidProfileResponse
 import java.util.*
 import kotlin.math.roundToInt
 
 class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.empty_activity_layout)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        supportFragmentManager.beginTransaction().replace(R.id.emptyLayout, LoginFragment())
-            .commit()
+        val naverClientId = getString(R.string.social_login_info_naver_client_id)
+        val naverClientSecret = getString(R.string.social_login_info_naver_client_secret)
+        val naverClientName = getString(R.string.social_login_info_naver_client_name)
+        NaverIdLoginSDK.initialize(this, naverClientId, naverClientSecret , naverClientName)
+
+        binding.ibNaverLogin.setOnClickListener {
+            startNaverLogin()
+        }
+
+        binding.btnFindAccount.setOnClickListener {
+
+        }
     }
 
-    fun loginEvent() {
-        // 임시로 SearchActivity 로 전환
+    // 네이버 소셜 로그인
+    private fun startNaverLogin(){
+        var naverToken :String? = ""
+
+        val profileCallback = object : NidProfileCallback<NidProfileResponse> {
+            override fun onSuccess(result: NidProfileResponse) {
+                val userId = result.profile?.id
+                val userName = result.profile?.name
+
+            }
+            override fun onFailure(httpStatus: Int, message: String) {
+                val errorCode = NaverIdLoginSDK.getLastErrorCode().code
+                val errorDescription = NaverIdLoginSDK.getLastErrorDescription()
+                Toast.makeText(this@LoginActivity, "errorCode: ${errorCode}\n" +
+                        "errorDescription: $errorDescription", Toast.LENGTH_SHORT).show()
+            }
+            override fun onError(errorCode: Int, message: String) {
+                onFailure(errorCode, message)
+            }
+        }
+
+        val oauthLoginCallback = object : OAuthLoginCallback {
+            override fun onSuccess() {
+                // 네이버 로그인 인증이 성공
+                naverToken = NaverIdLoginSDK.getAccessToken()
+//                var naverRefreshToken = NaverIdLoginSDK.getRefreshToken()
+//                var naverExpiresAt = NaverIdLoginSDK.getExpiresAt().toString()
+//                var naverTokenType = NaverIdLoginSDK.getTokenType()
+//                var naverState = NaverIdLoginSDK.getState().toString()
+
+                //로그인 유저 정보 가져오기
+                NidOAuthLogin().callProfileApi(profileCallback)
+            }
+            override fun onFailure(httpStatus: Int, message: String) {
+                val errorCode = NaverIdLoginSDK.getLastErrorCode().code
+                val errorDescription = NaverIdLoginSDK.getLastErrorDescription()
+                Toast.makeText(this@LoginActivity, "errorCode: ${errorCode}\n" +
+                        "errorDescription: $errorDescription", Toast.LENGTH_SHORT).show()
+            }
+            override fun onError(errorCode: Int, message: String) {
+                onFailure(errorCode, message)
+            }
+        }
+
+        NaverIdLoginSDK.authenticate(this, oauthLoginCallback)
+    }
+
+    private fun loginEvent() {
         val loginIntent = Intent(this, SearchActivity::class.java) // 메인 페이지로 전환
         startActivity(loginIntent)
-
-    }
-
-    fun registerEvent() {
-        val registerIntent = Intent(this, RegisterActivity::class.java) // 회원가입 페이지로 전환
-        startActivity(registerIntent)
-    }
-
-    fun transFragEvent(transNum : Int) {
-        val transaction = this.supportFragmentManager.beginTransaction()
-        val loginFrag = LoginFragment()
-        val findIdFrag = FindIdFragment()
-        val findPwFrag = FindPwFragment()
-
-        when(transNum) {
-            0 -> transaction.replace(R.id.emptyLayout, loginFrag)
-            1 -> transaction.replace(R.id.emptyLayout, findIdFrag)
-            2 -> transaction.replace(R.id.emptyLayout, findPwFrag)
-        }
-        transaction.commit()
-    }
-
-    fun showToastEvent(text : String, isShort : Boolean) {
-        if (isShort) {
-            Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(this, text, Toast.LENGTH_LONG).show()
-        }
     }
 
 
+    // 네이버 로그아웃
+    private fun startNaverLogout(){
+        NaverIdLoginSDK.logout()
+        Toast.makeText(this@LoginActivity, "로그아웃 되었습니다.", Toast.LENGTH_SHORT).show()
+    }
+
+    // 네이버 연동 해제
+    private fun startNaverDeleteToken(){
+        NidOAuthLogin().callDeleteTokenApi(this, object : OAuthLoginCallback {
+            override fun onSuccess() {
+                Log.d(TAG,"네이버 토근 삭제")
+            }
+            override fun onFailure(httpStatus: Int, message: String) {
+                // 서버에서 토큰 삭제에 실패했어도 클라이언트에 있는 토큰은 삭제되어 로그아웃된 상태
+                // 클라이언트에 토큰 정보가 없기 때문에 추가로 처리할 수 있는 작업 X
+                Log.d("naver", "errorCode: ${NaverIdLoginSDK.getLastErrorCode().code}")
+                Log.d("naver", "errorDesc: ${NaverIdLoginSDK.getLastErrorDescription()}")
+            }
+            override fun onError(errorCode: Int, message: String) {
+                onFailure(errorCode, message)
+            }
+        })
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    fun loginEvent() {
+//        // 임시로 SearchActivity 로 전환
+//        val loginIntent = Intent(this, SearchActivity::class.java) // 메인 페이지로 전환
+//        startActivity(loginIntent)
+//
+//    }
+//
+//    fun registerEvent() {
+//        val registerIntent = Intent(this, RegisterActivity::class.java) // 회원가입 페이지로 전환
+//        startActivity(registerIntent)
+//    }
+//
+//    fun transFragEvent(transNum : Int) {
+//        val transaction = this.supportFragmentManager.beginTransaction()
+//        val loginFrag = LoginFragment()
+//        val findIdFrag = FindIdFragment()
+//        val findPwFrag = FindPwFragment()
+//
+//        when(transNum) {
+//            0 -> transaction.replace(R.id.emptyLayout, loginFrag)
+//            1 -> transaction.replace(R.id.emptyLayout, findIdFrag)
+//            2 -> transaction.replace(R.id.emptyLayout, findPwFrag)
+//        }
+//        transaction.commit()
+//    }
+//
+//    fun showToastEvent(text : String, isShort : Boolean) {
+//        if (isShort) {
+//            Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+//        } else {
+//            Toast.makeText(this, text, Toast.LENGTH_LONG).show()
+//        }
+//    }
+
+

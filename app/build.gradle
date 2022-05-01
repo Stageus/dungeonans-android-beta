@@ -67,4 +67,10 @@ dependencies {
     // 레트로핏 로깅 인터셉터
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.3"
 
+    // naver Oauth
+    implementation 'com.navercorp.nid:oauth:5.1.0' // jdk 11
+    implementation 'androidx.security:security-crypto:1.1.0-alpha03'
+    implementation 'androidx.browser:browser:1.4.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.0'
 }
