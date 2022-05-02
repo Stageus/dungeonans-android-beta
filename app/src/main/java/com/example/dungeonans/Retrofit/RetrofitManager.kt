@@ -1,12 +1,14 @@
 package com.example.dungeonans.Retrofit
 
 import android.util.Log
+import com.example.dungeonans.BlogData
 import com.example.dungeonans.Utils.API
 import com.example.dungeonans.Utils.Constants.TAG
 import com.example.dungeonans.Utils.RESPONSE_STATE
 import com.google.gson.JsonElement
 import retrofit2.Call
 import retrofit2.Response
+import java.text.SimpleDateFormat
 
 class RetrofitManager {
 
@@ -19,7 +21,7 @@ class RetrofitManager {
 
 
     // 사진 검색 api 호출
-    fun searchBlogs(searchTerm: String?, completion: (RESPONSE_STATE, String) -> Unit){
+    fun searchBlogs(searchTerm: String?, completion: (RESPONSE_STATE, ArrayList<BlogData>?) -> Unit){
 
         val term = searchTerm.let {
             it
@@ -38,14 +40,44 @@ class RetrofitManager {
             override fun onFailure(call: Call<JsonElement>, t: Throwable) {
                 Log.d(TAG, "RetrofitManager - onFailure() called / t: $t")
 
-                completion(RESPONSE_STATE.FAIL, t.toString())
+                completion(RESPONSE_STATE.FAIL, null)
             }
 
             // 응답 성공시
             override fun onResponse(call: Call<JsonElement>, response: Response<JsonElement>) {
-                Log.d(TAG, "RetrofitManager - onResponse() called / response : ${response.body()}")
 
-                completion(RESPONSE_STATE.OKAY ,response.body().toString())
+                when(response.code()) {
+                    200 -> {
+                        response.body()?.let {
+                            var parsedBlogDataArray = ArrayList<BlogData>()
+                            val body = it.asJsonObject // response.body가 있을 때
+                            val results = body.getAsJsonArray("results")
+                            val total = body.get("total").asInt
+
+                            results.forEach { resultItem ->
+                                val resultItemObject = resultItem.asJsonObject
+
+                                // Blog data에 맞게 변환
+                                val user = resultItemObject.get("user").asJsonObject
+                                val userName = user.get("username").asString
+                                val likeCount = resultItemObject.get("likes").asInt
+                                val thumbnailLink = resultItemObject.get("urls").asJsonObject.get("thumb").asString
+                                val createdAt = resultItemObject.get("created_at").asString
+                                val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+                                val formatter = SimpleDateFormat("yyyy년\nMM월 dd일")
+                                val outputDataString = formatter.format(parser.parse(createdAt))
+
+                                val blogItem = BlogData(author = userName,
+                                    likeCount = likeCount,
+                                    thumbnail = thumbnailLink,
+                                    createdAt = createdAt)
+                                parsedBlogDataArray.add(blogItem)
+                            }
+
+                            completion(RESPONSE_STATE.OKAY , parsedBlogDataArray)
+                        }
+                    }
+                }
             }
 
         })

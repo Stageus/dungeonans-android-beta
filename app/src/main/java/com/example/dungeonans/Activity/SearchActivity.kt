@@ -1,6 +1,7 @@
 package com.example.dungeonans.Activity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -65,17 +66,26 @@ class SearchActivity : AppCompatActivity() {
         searchBtn.setOnClickListener {
             Log.d(TAG, "MainActivity - 검색 버튼이 클릭되었다. / currentSearchType : $currentSearchType")
 
+            val userSearchInput = searchTermEditText.text.toString()
             // 검색 api 호출
-            RetrofitManager.instance.searchBlogs(searchTerm = searchTermEditText.toString(), completion = {
-                    responseState, responseBody ->
+            RetrofitManager.instance.searchBlogs(searchTerm = userSearchInput, completion = {
+                    responseState, responseDataArrayList ->
 
                 when(responseState) {
                     RESPONSE_STATE.OKAY -> {
-                        Log.d(TAG, "api 호출 성공 : $responseBody")
+                        Log.d(TAG, "api 호출 성공")
+
+                        val intent = Intent(this, SearchResultActivity::class.java)
+                        val bundle = Bundle()
+                        bundle.putSerializable("blog_array_list",responseDataArrayList)
+                        intent.putExtra("array_bundle", bundle)
+                        intent.putExtra("search_term", userSearchInput)
+                        startActivity(intent)
+
                     }
                     RESPONSE_STATE.FAIL -> {
                         Toast.makeText(this, "api 호출 에러입니다.", Toast.LENGTH_SHORT).show()
-                        Log.d(TAG, "api 호출 실패 : $responseBody")
+                        Log.d(TAG, "api 호출 실패 : $responseDataArrayList")
                     }
                 }
 

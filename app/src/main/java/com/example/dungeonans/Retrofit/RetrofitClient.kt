@@ -1,6 +1,9 @@
 package com.example.dungeonans.Retrofit
 
+import android.os.Looper
 import android.util.Log
+import android.widget.Toast
+import com.example.dungeonans.App
 import com.example.dungeonans.Utils.API
 import com.example.dungeonans.Utils.Constants.TAG
 import com.example.dungeonans.Utils.isJsonArray
@@ -13,6 +16,7 @@ import org.json.JSONObject
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
+import java.util.logging.Handler
 
 // 싱글턴
 object RetrofitClient {
@@ -76,7 +80,17 @@ object RetrofitClient {
                     .method(originalRequest.method, originalRequest.body)
                     .build()
 
-                return chain.proceed(finalRequest)
+//                return chain.proceed(finalRequest)
+                val response = chain.proceed(finalRequest)
+
+                if (response.code != 200) {
+
+                    android.os.Handler(Looper.getMainLooper()).post {
+                        Toast.makeText(App.instance, "${response.code} 에러 입니다.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                return response
             }
 
         })

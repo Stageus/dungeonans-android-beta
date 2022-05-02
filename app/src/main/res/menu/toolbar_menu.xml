@@ -10,7 +10,7 @@
 
     <item
         android:id="@+id/action_share"
-        android:title="공유"
+        android:title="알림"
         android:orderInCategory="100"
         android:icon="@drawable/notice_icon"
         app:showAsAction="ifRoom" />
