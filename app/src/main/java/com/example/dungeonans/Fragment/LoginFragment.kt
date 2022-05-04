@@ -118,29 +118,5 @@ class LoginFragment : Fragment() {
 //
 //    }
 //
-//    private fun findExistingAccountEvent() {
-//        AlertDialog.Builder(loginActivity)
-//            .setView(R.layout.findaccount_dialog_layout)
-//            .setCancelable(true)
-//            .show()
-//            .also { alertDialog ->
-//
-//                if(alertDialog == null) {
-//                    return@also
-//                }
-//
-//                val findIdBtn = alertDialog.findViewById<Button>(R.id.findIdBtn)
-//                val findPwBtn = alertDialog.findViewById<Button>(R.id.findPwBtn)
-//
-//                findIdBtn?.setOnClickListener{ // id 찾기
-//                    alertDialog.dismiss()
-//                    loginActivity.transFragEvent(1) // findIdFrag 전환
-//                }
-//
-//                findPwBtn?.setOnClickListener {  // pw 찾기
-//                    alertDialog.dismiss()
-//                    loginActivity.transFragEvent(2) // findPwFrag 전환
-//                }
-//            }
-//    }
+
 }

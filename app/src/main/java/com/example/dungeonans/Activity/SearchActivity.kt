@@ -5,18 +5,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Config.PROFILE
 import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.addTextChangedListener
 import com.example.dungeonans.R
 import com.example.dungeonans.Retrofit.RetrofitManager
 import com.example.dungeonans.Utils.Constants.TAG
-import com.example.dungeonans.Utils.RESPONSE_STATE
+import com.example.dungeonans.Utils.RESPONSE_STATUS
 import com.example.dungeonans.Utils.SEARCH_TYPE
 import com.example.dungeonans.Utils.onMyTextChanged
 import com.google.android.material.textfield.TextInputEditText
@@ -72,7 +68,7 @@ class SearchActivity : AppCompatActivity() {
                     responseState, responseDataArrayList ->
 
                 when(responseState) {
-                    RESPONSE_STATE.OKAY -> {
+                    RESPONSE_STATUS.OKAY -> {
                         Log.d(TAG, "api 호출 성공")
 
                         val intent = Intent(this, SearchResultActivity::class.java)
@@ -83,9 +79,13 @@ class SearchActivity : AppCompatActivity() {
                         startActivity(intent)
 
                     }
-                    RESPONSE_STATE.FAIL -> {
+                    RESPONSE_STATUS.FAIL -> {
                         Toast.makeText(this, "api 호출 에러입니다.", Toast.LENGTH_SHORT).show()
                         Log.d(TAG, "api 호출 실패 : $responseDataArrayList")
+                    }
+
+                    RESPONSE_STATUS.NO_CONTENT -> {
+                        Toast.makeText(this, "검색 결과가 없습니다.", Toast.LENGTH_SHORT).show()
                     }
                 }
 

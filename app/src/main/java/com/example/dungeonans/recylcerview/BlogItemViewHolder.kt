@@ -25,6 +25,7 @@ class BlogItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         Glide.with(App.instance)
             .load(blogItem.thumbnail)
             .override(300,80)
+            .fitCenter()
             .into(blogImgView)
     }
 

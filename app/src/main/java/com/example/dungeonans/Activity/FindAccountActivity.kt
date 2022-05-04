@@ -1,27 +1,40 @@
 package com.example.dungeonans.Activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dungeonans.Fragment.FindIdFragment
+import com.example.dungeonans.Fragment.FindPwFragment
 import com.example.dungeonans.R
 
 class FindAccountActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.empty_activity_layout)
 
-        this.supportFragmentManager.beginTransaction()
-            .replace(R.id.emptyLayout, FindIdFragment())
-            .commit()
+        val display: String? = intent.getStringExtra("find")
 
+        when(display) {
+            "id" -> {
+                this.supportFragmentManager.beginTransaction()
+                    .replace(R.id.emptyLayout, FindIdFragment())
+                    .commit()
 
+            }
+            "pw" -> {
+                this.supportFragmentManager.beginTransaction()
+                    .replace(R.id.emptyLayout, FindPwFragment())
+                    .commit()
+            }
+        }
     }
 
-
-
-
-
+    fun moveBackPage() {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+    }
 
 }

@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.4">
+        app:layout_constraintHeight_percent="0.5">
 
         <ImageButton
             android:id="@+id/backPageBtn"
@@ -83,29 +83,33 @@
             android:id="@+id/codeInputLayout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="2.5"
-            android:visibility="invisible"
+            android:layout_weight="7"
+            android:gravity="center_horizontal"
             android:orientation="horizontal"
-            android:gravity="center_horizontal">
+            android:paddingBottom="10dp"
+            android:visibility="invisible">
+
             <com.raycoarana.codeinputview.CodeInputView
                 android:id="@+id/codeInputView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:underline_color="@color/darkGrey"
-                app:underline_selected_color="@color/black"
+                android:layout_margin="20dp"
+                android:paddingBottom="10dp"
+                app:animate_on_complete="false"
+                app:code_text_color="@color/black"
                 app:input_type="numeric"
-                app:length_of_code="6"/>
+                app:length_of_code="6"
+                app:error_text_gravity="center"
+                app:underline_color="@color/darkGrey"
+                app:underline_selected_color="@color/black" />
+
             <TextView
                 android:id="@+id/timeTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="50dp"
                 android:text="03:00"
-                android:textColor="@color/hashtagRed"
-                android:layout_gravity="center_vertical"/>
-
+                android:textColor="@color/hashtagRed" />
         </LinearLayout>
 
 

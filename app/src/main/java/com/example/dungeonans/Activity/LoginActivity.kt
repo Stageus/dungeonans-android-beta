@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dungeonans.Fragment.FindPwFragment
 import com.example.dungeonans.Fragment.LoginFragment
@@ -37,7 +38,15 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnFindAccount.setOnClickListener {
+            findExistingAccountEvent()
+        }
 
+        binding.btnRegister.setOnClickListener {
+            registerEvent()
+        }
+
+        binding.loginBtn.setOnClickListener {
+            loginEvent()
         }
     }
 
@@ -93,6 +102,41 @@ class LoginActivity : AppCompatActivity() {
         startActivity(loginIntent)
     }
 
+    private fun findExistingAccountEvent() {
+        AlertDialog.Builder(this)
+            .setView(R.layout.findaccount_dialog_layout)
+            .setCancelable(true)
+            .show()
+            .also { alertDialog ->
+
+                if(alertDialog == null) {
+                    return@also
+                }
+
+                val findIdBtn = alertDialog.findViewById<Button>(R.id.findIdBtn)
+                val findPwBtn = alertDialog.findViewById<Button>(R.id.findPwBtn)
+
+                findIdBtn?.setOnClickListener{ // id 찾기
+                    alertDialog.dismiss()
+                    val intent = Intent(this, FindAccountActivity::class.java) // 계정 찾기 액티비티 전환
+                    intent.putExtra("find","id")
+                    startActivity(intent)
+                }
+
+                findPwBtn?.setOnClickListener {  // pw 찾기
+                    alertDialog.dismiss()
+                    val intent = Intent(this, FindAccountActivity::class.java) // 계정 찾기 액티비티 전환
+                    intent.putExtra("find","pw")
+                    startActivity(intent) // findPwFrag 전환
+                }
+            }
+    }
+
+    private fun registerEvent() {
+        val registerIntent = Intent(this, RegisterActivity::class.java) // 회원가입 페이지로 전환
+        startActivity(registerIntent)
+    }
+
 
     // 네이버 로그아웃
     private fun startNaverLogout(){
@@ -129,42 +173,5 @@ class LoginActivity : AppCompatActivity() {
 
 
 
-
-
-
-
-//    fun loginEvent() {
-//        // 임시로 SearchActivity 로 전환
-//        val loginIntent = Intent(this, SearchActivity::class.java) // 메인 페이지로 전환
-//        startActivity(loginIntent)
-//
-//    }
-//
-//    fun registerEvent() {
-//        val registerIntent = Intent(this, RegisterActivity::class.java) // 회원가입 페이지로 전환
-//        startActivity(registerIntent)
-//    }
-//
-//    fun transFragEvent(transNum : Int) {
-//        val transaction = this.supportFragmentManager.beginTransaction()
-//        val loginFrag = LoginFragment()
-//        val findIdFrag = FindIdFragment()
-//        val findPwFrag = FindPwFragment()
-//
-//        when(transNum) {
-//            0 -> transaction.replace(R.id.emptyLayout, loginFrag)
-//            1 -> transaction.replace(R.id.emptyLayout, findIdFrag)
-//            2 -> transaction.replace(R.id.emptyLayout, findPwFrag)
-//        }
-//        transaction.commit()
-//    }
-//
-//    fun showToastEvent(text : String, isShort : Boolean) {
-//        if (isShort) {
-//            Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
-//        } else {
-//            Toast.makeText(this, text, Toast.LENGTH_LONG).show()
-//        }
-//    }
 
 

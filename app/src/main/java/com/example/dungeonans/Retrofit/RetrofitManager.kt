@@ -4,7 +4,7 @@ import android.util.Log
 import com.example.dungeonans.BlogData
 import com.example.dungeonans.Utils.API
 import com.example.dungeonans.Utils.Constants.TAG
-import com.example.dungeonans.Utils.RESPONSE_STATE
+import com.example.dungeonans.Utils.RESPONSE_STATUS
 import com.google.gson.JsonElement
 import retrofit2.Call
 import retrofit2.Response
@@ -21,7 +21,7 @@ class RetrofitManager {
 
 
     // 사진 검색 api 호출
-    fun searchBlogs(searchTerm: String?, completion: (RESPONSE_STATE, ArrayList<BlogData>?) -> Unit){
+    fun searchBlogs(searchTerm: String?, completion: (RESPONSE_STATUS, ArrayList<BlogData>?) -> Unit){
 
         val term = searchTerm.let {
             it
@@ -40,7 +40,7 @@ class RetrofitManager {
             override fun onFailure(call: Call<JsonElement>, t: Throwable) {
                 Log.d(TAG, "RetrofitManager - onFailure() called / t: $t")
 
-                completion(RESPONSE_STATE.FAIL, null)
+                completion(RESPONSE_STATUS.FAIL, null)
             }
 
             // 응답 성공시
@@ -54,27 +54,31 @@ class RetrofitManager {
                             val results = body.getAsJsonArray("results")
                             val total = body.get("total").asInt
 
-                            results.forEach { resultItem ->
-                                val resultItemObject = resultItem.asJsonObject
+                            if (total == 0) { // 검색 데이터가 없을 때
+                                completion(RESPONSE_STATUS.NO_CONTENT, null)
+                            } else {
+                                results.forEach { resultItem ->
+                                    val resultItemObject = resultItem.asJsonObject
 
-                                // Blog data에 맞게 변환
-                                val user = resultItemObject.get("user").asJsonObject
-                                val userName = user.get("username").asString
-                                val likeCount = resultItemObject.get("likes").asInt
-                                val thumbnailLink = resultItemObject.get("urls").asJsonObject.get("thumb").asString
-                                val createdAt = resultItemObject.get("created_at").asString
-                                val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
-                                val formatter = SimpleDateFormat("yyyy년\nMM월 dd일")
-                                val outputDataString = formatter.format(parser.parse(createdAt))
+                                    // Blog data에 맞게 변환
+                                    val user = resultItemObject.get("user").asJsonObject
+                                    val userName = user.get("username").asString
+                                    val likeCount = resultItemObject.get("likes").asInt
+                                    val thumbnailLink = resultItemObject.get("urls").asJsonObject.get("thumb").asString
+                                    val createdAt = resultItemObject.get("created_at").asString
+                                    val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss")
+                                    val formatter = SimpleDateFormat("yyyy년\nMM월 dd일")
+                                    val outputDataString = formatter.format(parser.parse(createdAt))
 
-                                val blogItem = BlogData(author = userName,
-                                    likeCount = likeCount,
-                                    thumbnail = thumbnailLink,
-                                    createdAt = createdAt)
-                                parsedBlogDataArray.add(blogItem)
+                                    val blogItem = BlogData(author = userName,
+                                        likeCount = likeCount,
+                                        thumbnail = thumbnailLink,
+                                        createdAt = createdAt)
+                                    parsedBlogDataArray.add(blogItem)
+                                }
+
+                                completion(RESPONSE_STATUS.OKAY , parsedBlogDataArray)
                             }
-
-                            completion(RESPONSE_STATE.OKAY , parsedBlogDataArray)
                         }
                     }
                 }

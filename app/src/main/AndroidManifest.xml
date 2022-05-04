@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dungeonans.Material">
         <activity
-            android:name=".Activity.SearchActivity"
+            android:name=".Activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- <activity android:name=".Activity.SearchActivity"/> -->
         <activity android:name=".Activity.RegisterActivity"/>
         <activity android:name=".Activity.SearchResultActivity"/>
-        <activity android:name=".Activity.LoginActivity"/>
+        <activity android:name=".Activity.SearchActivity"/>
+        <activity android:name=".Activity.FindAccountActivity"/>
     </application>
 
 </manifest>

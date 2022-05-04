@@ -8,18 +8,20 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.dungeonans.Activity.FindAccountActivity
 import com.example.dungeonans.Activity.LoginActivity
 import com.example.dungeonans.Activity.MainActivity
 import com.example.dungeonans.R
 
 class FindIdFragment : Fragment() {
 
-    private lateinit var loginActivity : MainActivity
+    private lateinit var findActivity : FindAccountActivity
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        loginActivity = activity as MainActivity
+        findActivity = activity as FindAccountActivity
     }
 
     override fun onCreateView(
@@ -37,34 +39,34 @@ class FindIdFragment : Fragment() {
         val backPageBtn = view.findViewById<ImageButton>(R.id.backPageBtn)
         val findIdBtn = view.findViewById<Button>(R.id.findIdBtn)
 
-//        findIdBtn?.setOnClickListener {
-//            findIdEvent(nameET, emailET)
-//        }
-//
-//        backPageBtn.setOnClickListener {
-//            moveBackPageEvent()
-//        }
+        findIdBtn.setOnClickListener {
+            findIdEvent(nameET, emailET)
+        }
+
+        backPageBtn.setOnClickListener {
+            moveBackPageEvent()
+        }
 
         return view
     }
 
-//    private fun findIdEvent(nameET: EditText?, emailET: EditText?) {
-//        val nameString = nameET?.text.toString()
-//        val emailString = emailET?.text.toString()
-//
-//        if (nameString.isEmpty() || emailString.isEmpty()) {
-//            loginActivity.showToastEvent("이름 또는 이메일을 입력해주세요.",true)
-//        }
-//        else {
-//            connectLoginApi()
-//        }
-//    }
-//
-//    private fun moveBackPageEvent() {
-//        loginActivity.transFragEvent(0)
-//    }
-//
-//    fun connectLoginApi() {
-//
-//    }
+    private fun findIdEvent(nameET: EditText?, emailET: EditText?) {
+        val nameString = nameET?.text.toString()
+        val emailString = emailET?.text.toString()
+
+        if (nameString.isEmpty() || emailString.isEmpty()) {
+            Toast.makeText(findActivity,"이름 또는 이메일을 입력해주세요", Toast.LENGTH_SHORT).show()
+        }
+        else {
+            connectLoginApi()
+        }
+    }
+
+    private fun moveBackPageEvent() {
+        findActivity.moveBackPage()
+    }
+
+    fun connectLoginApi() {
+
+    }
 }

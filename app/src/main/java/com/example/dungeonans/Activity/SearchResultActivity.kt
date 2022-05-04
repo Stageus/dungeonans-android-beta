@@ -34,6 +34,8 @@ class SearchResultActivity: AppCompatActivity() {
 
         Log.d(TAG, "searchTerm : $searchTerm, photoList.count(): ${photoList.count()}" )
 
+        top_tool_bar.title = searchTerm
+
         this.blogGridRecyclerViewAdapter = BlogGridViewRecyclerViewAdapter()
         this.blogGridRecyclerViewAdapter.submitList(photoList)
 
