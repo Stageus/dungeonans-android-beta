@@ -21,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.RegisterActivity"/>
+        <activity android:name=".Activity.RegisterActivity"
+            android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".Activity.SearchResultActivity"/>
         <activity android:name=".Activity.SearchActivity"/>
         <activity android:name=".Activity.FindAccountActivity"/>

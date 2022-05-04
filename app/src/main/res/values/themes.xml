@@ -16,4 +16,8 @@
                 <item name="colorPrimaryVariant">@color/djangoClicked</item>
                 <item name="colorOnPrimary">@color/darkGrey</item>
     </style>
+
+    <style name="Theme.Dungeonans.splash" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:windowBackground">@drawable/app_title_xml</item>
+    </style>
 </resources>

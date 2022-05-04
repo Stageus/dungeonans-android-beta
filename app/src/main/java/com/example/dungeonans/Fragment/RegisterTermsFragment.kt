@@ -1,6 +1,7 @@
 package com.example.dungeonans.Fragment
 
 import android.app.AlertDialog
+import android.content.Context
 import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
@@ -9,23 +10,29 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
+import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import com.example.dungeonans.Activity.RegisterActivity
 import com.example.dungeonans.R
 
 class RegisterTermsFragment : Fragment() {
 
-    private val registerActivity = activity as RegisterActivity
+    private lateinit var registerActivity : RegisterActivity
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        registerActivity = activity as RegisterActivity
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.register_terms_fragment_layout, container, false)
+        val view = inflater.inflate(R.layout.fragment_register_terms, container, false)
 
         // button
-        val backPageBtn = view.findViewById<Button>(R.id.backPageBtn)
+        val backPageBtn = view.findViewById<ImageButton>(R.id.backPageBtn)
         val nextPageBtn = view.findViewById<Button>(R.id.nextPageBtn)
         val term1DetailBtn = view.findViewById<Button>(R.id.term1DetailBtn)
         val term2DetailBtn = view.findViewById<Button>(R.id.term2DetailBtn)

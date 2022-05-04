@@ -1,10 +1,10 @@
 package com.example.dungeonans.Fragment
 
+import android.app.AlertDialog
 import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -41,7 +41,7 @@ class RegisterConfirmFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val view = inflater.inflate(R.layout.register_confirmpage_fragment, container, false)
+        val view = inflater.inflate(R.layout.fragment_register_confirm, container, false)
 
         // Button
         val nextPageBtn = view.findViewById<Button>(R.id.nextPageBtn)
@@ -90,6 +90,10 @@ class RegisterConfirmFragment : Fragment() {
                     }
                 }
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) = Unit })
+        }
+
+        overlapCheckBtn.setOnClickListener {
+            overlapCheckEvent()
         }
 
         // 다음 페이지 이동 (회원가입 완료)
@@ -189,6 +193,15 @@ class RegisterConfirmFragment : Fragment() {
             emailIL?.hintTextColor = ContextCompat.getColorStateList(registerActivity, R.color.grey)
             isEmailAcceptable = true
         }
+    }
+
+    private fun overlapCheckEvent() {
+        AlertDialog.Builder(registerActivity)
+            .setMessage("사용가능한 아이디입니다.")
+            .setPositiveButton("확인", null)
+            .show()
+
+        isIdOverlapping = true
     }
 
     private fun moveBackPageEvent() {

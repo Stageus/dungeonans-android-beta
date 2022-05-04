@@ -27,6 +27,9 @@
         <entry key="app/src/main/res/layout/findaccount_dialog_layout.xml" value="0.4190052405948973" />
         <entry key="app/src/main/res/layout/findid_fragment_layout.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/findpw_fragment_layout.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_register_complete.xml" value="0.2884534581555416" />
+        <entry key="app/src/main/res/layout/fragment_register_confirm.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_register_terms.xml" value="0.33" />
         <entry key="app/src/main/res/layout/layout_blog_item.xml" value="0.2364258230012826" />
         <entry key="app/src/main/res/layout/layout_button_search.xml" value="0.31936725096194957" />
         <entry key="app/src/main/res/layout/login_activity_layout.xml" value="0.5103734439834025" />
@@ -35,7 +38,7 @@
         <entry key="app/src/main/res/layout/noticepage_activity.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/register_confirmpage_fragment.xml" value="0.37305699481865284" />
         <entry key="app/src/main/res/layout/register_terms_fragment_layout.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/register_userpage_fragment.xml" value="0.29585292860196666" />
+        <entry key="app/src/main/res/layout/register_userpage_fragment.xml" value="0.28156917616056043" />
         <entry key="app/src/main/res/layout/registerpage_fragment.xml" value="0.46785714285714286" />
         <entry key="app/src/main/res/layout/search_activity_layout.xml" value="0.28437121824710576" />
         <entry key="app/src/main/res/layout/test.xml" value="0.25833333333333336" />

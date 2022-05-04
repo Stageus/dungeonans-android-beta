@@ -4,46 +4,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:weightSum="20"
     android:paddingTop="10dp">
+
     <ImageButton
         android:id="@+id/backPageBtn"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="10dp"
+        android:layout_margin="20dp"
         android:src="@drawable/return_page_icon"
         android:background="@color/transparent"
         android:scaleType="fitStart"
-        android:layout_weight="0.1"/>
+        android:layout_weight="1"/>
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
-        android:src="@drawable/app_logo_xml"
+        android:layout_weight="4"
         android:adjustViewBounds="true"
-        android:layout_weight="0.4"/>
+        android:src="@drawable/app_logo_xml" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:text="약관에"
         android:textSize="25sp"
-        android:textAlignment="viewEnd"
-        android:layout_weight="0.1"/>
+        android:gravity="bottom"
+        android:layout_weight="1.5"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
         android:text="동의해주세요"
         android:textSize="25sp"
-        android:layout_weight="0.1"/>
+        android:layout_weight="1.5"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="15dp"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:layout_weight="1.2"
+        android:layout_weight="10"
         android:scrollbars="none">
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,7 +62,9 @@
                     android:id="@+id/term1CheckBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:layout_marginRight="5dp"
+                    android:buttonTint="@color/blue"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -87,7 +92,10 @@
                     android:id="@+id/term2CheckBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:layout_marginRight="5dp"
+                    android:buttonTint="@color/blue"/>
+
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -116,7 +124,9 @@
                     android:id="@+id/term3CheckBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:layout_marginRight="5dp"
+                    android:buttonTint="@color/blue"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -133,7 +143,9 @@
                     android:id="@+id/term4CheckBox"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:layout_marginRight="5dp"
+                    android:buttonTint="@color/blue"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -143,6 +155,7 @@
         </LinearLayout>
 
     </ScrollView>
+
     <Button
         android:id="@+id/nextPageBtn"
         android:layout_width="match_parent"
@@ -152,6 +165,6 @@
         android:textStyle="bold"
         android:textColor="@color/white"
         android:background="@drawable/register_next_page_btn"
-        android:layout_weight="0.2"/>
+        android:layout_weight="2"/>
 
 </LinearLayout>
