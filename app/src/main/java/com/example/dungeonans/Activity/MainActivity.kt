@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_search -> {
+            R.id.search_menu -> {
                 Log.d("tag", "search")
                 true
             }

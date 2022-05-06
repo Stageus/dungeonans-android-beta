@@ -12,9 +12,10 @@
     </style>
 
     <style name="Theme.Dungeonans.Material" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
-                <item name="colorPrimary">@color/cClicked</item>
-                <item name="colorPrimaryVariant">@color/djangoClicked</item>
-                <item name="colorOnPrimary">@color/darkGrey</item>
+        <item name="colorPrimary">@color/cClicked</item>
+        <item name="colorPrimaryVariant">@color/djangoClicked</item>
+        <item name="colorOnPrimary">@color/darkGrey</item>
+        <item name="colorAccent">@color/neoBlue</item>
     </style>
 
     <style name="Theme.Dungeonans.splash" parent="Theme.AppCompat.Light.NoActionBar">

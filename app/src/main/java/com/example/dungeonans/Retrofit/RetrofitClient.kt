@@ -71,7 +71,6 @@ object RetrofitClient {
                 // 오리지날 리퀘스트
                 val originalRequest = chain.request()
 
-                // ?client_id=asdfadsf
                 // 쿼리 파라매터 추가하기
                 val addedUrl = originalRequest.url.newBuilder().addQueryParameter("client_id", API.CLIENT_ID).build()
 
@@ -80,7 +79,6 @@ object RetrofitClient {
                     .method(originalRequest.method, originalRequest.body)
                     .build()
 
-//                return chain.proceed(finalRequest)
                 val response = chain.proceed(finalRequest)
 
                 if (response.code != 200) {
