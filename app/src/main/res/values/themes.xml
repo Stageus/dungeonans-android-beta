@@ -17,7 +17,7 @@
                 <item name="colorOnPrimary">@color/darkGrey</item>
     </style>
 
-    <style name="Theme.Dungeonans.splash" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
-        <item name="android:windowBackground">@drawable/app_title_xml</item>
+    <style name="Theme.Dungeonans.splash" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
     </style>
 </resources>
