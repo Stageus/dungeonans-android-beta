@@ -1,6 +1,8 @@
 package com.example.dungeonans.Fragment
 
 import GridSpacingItemDecoration
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +12,7 @@ import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dungeonans.Activity.ProfilePostActivity
 import com.example.dungeonans.Adapter.BlogCardViewAdapter
 import com.example.dungeonans.DataClass.BlogData
 import com.example.dungeonans.R
@@ -27,19 +30,48 @@ class MyProfileFragment : Fragment() {
 
         var instaBtn = view.findViewById<Button>(R.id.instaBtn)
         instaBtn.setOnClickListener{
-//            Uri uri = Uri.parse("http://instagram.com/_u/xxx");
-//            Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
-//
-//            likeIng.setPackage("com.instagram.android");
-//
-//            try {
-//                startActivity(likeIng);
-//            } catch (ActivityNotFoundException e) {
-//                startActivity(new Intent(Intent.ACTION_VIEW,
-//                    Uri.parse("http://instagram.com/xxx")));
-//            }
+            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/yongjunkimmm/"))
+            startActivity(intent)
         }
-        
+
+        var gitBtn = view.findViewById<Button>(R.id.gitBtn)
+        gitBtn.setOnClickListener{
+            var intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/yongkingg"))
+            startActivity(intent)
+        }
+
+        var faceBookBtn = view.findViewById<Button>(R.id.faceBookBtn)
+        faceBookBtn.setOnClickListener {
+
+        }
+
+        var gitGrassBtn = view.findViewById<Button>(R.id.gitGrassBtn)
+        gitGrassBtn.setOnClickListener{
+
+        }
+
+        var showAllMyPostBtn : Button = view.findViewById(R.id.showAllMyPostBtn)
+        showAllMyPostBtn.setOnClickListener{
+            var intent = Intent(context, ProfilePostActivity::class.java)
+            intent.putExtra("key","1")
+            startActivity(intent)
+        }
+
+        var showAllMyCommentBtn : Button = view.findViewById(R.id.showAllMyCommentBtn)
+        showAllMyCommentBtn.setOnClickListener{
+            var intent = Intent(context, ProfilePostActivity::class.java)
+            intent.putExtra("key","2")
+            startActivity(intent)
+        }
+
+        var showAllMyBlogBtn : Button = view.findViewById(R.id.showAllMyBlogBtn)
+        showAllMyBlogBtn.setOnClickListener{
+            var intent = Intent(context, ProfilePostActivity::class.java)
+            intent.putExtra("key","3")
+            startActivity(intent)
+        }
+
+
         renderUi(view)
         return view
     }

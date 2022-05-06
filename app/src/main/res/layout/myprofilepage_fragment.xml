@@ -9,34 +9,48 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <View
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/profilepage_background"/>
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="-100dp"
-            android:background="@drawable/profile_base_icon"/>
-        <TextView
-            android:id="@+id/nameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="김주영"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_gravity="center"/>
+            android:layout_height="270dp">
 
-        <TextView
-            android:id="@+id/nicknameTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="\u0040develop_genius"
-            android:textColor="@color/gray"
-            android:textSize="10sp"
-            android:layout_gravity="center"/>
+            <ImageView
+                android:src="@drawable/testtesttesttesttesttest"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="170dp"
+                android:background="@drawable/profilepage_background"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:background="@drawable/profile_base_icon"/>
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="김주영"
+                android:layout_marginTop="110dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/nicknameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\u0040develop_genius"
+                android:textColor="@color/gray"
+                android:layout_marginTop="130dp"
+                android:textSize="10sp"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
 
         <HorizontalScrollView
             android:layout_marginTop="5dp"
@@ -161,6 +175,7 @@
             android:background="@drawable/top_bottom_stroke"
             android:orientation="horizontal">
             <Button
+                android:id="@+id/faceBookBtn"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginLeft="40dp"
@@ -172,11 +187,13 @@
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/instagram_icon"/>
             <Button
+                android:id="@+id/gitBtn"
                 android:layout_width="25dp"
                 android:layout_marginLeft="5dp"
                 android:layout_height="25dp"
                 android:background="@drawable/_git_icon"/>
             <Button
+                android:id="@+id/gitGrassBtn"
                 android:layout_width="25dp"
                 android:layout_marginLeft="5dp"
                 android:layout_height="25dp"

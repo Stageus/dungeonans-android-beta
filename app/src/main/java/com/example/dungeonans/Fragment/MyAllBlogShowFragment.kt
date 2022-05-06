@@ -2,7 +2,6 @@ package com.example.dungeonans.Fragment
 
 import GridSpacingItemDecoration
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,7 +13,7 @@ import com.example.dungeonans.Adapter.BlogCardViewAdapter
 import com.example.dungeonans.DataClass.BlogData
 import com.example.dungeonans.R
 
-class BlogFragment : Fragment() {
+class MyAllBlogShowFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater,container: ViewGroup?,savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.blogpage_fragment,container,false)
         renderUi(view)

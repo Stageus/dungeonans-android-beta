@@ -30,7 +30,6 @@ class BlogCardViewAdapter : RecyclerView.Adapter<BlogHolder>() { // RecyclerView
         cardViewBody.viewTreeObserver.addOnGlobalLayoutListener(object: ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
                 width = cardViewBody.width
-                Log.d("tag",width.toString())
                 cardViewBody.viewTreeObserver.removeOnGlobalLayoutListener(this)
             }
         })
