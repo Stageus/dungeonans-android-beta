@@ -4,7 +4,6 @@ import android.app.SearchManager
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.text.InputFilter
 import android.util.Log
 import android.view.Menu
@@ -12,7 +11,6 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.dungeonans.BlogData
 import com.example.dungeonans.R
 import com.example.dungeonans.Utils.Constants.TAG
@@ -65,7 +63,7 @@ class SearchResultActivity: AppCompatActivity(), androidx.appcompat.widget.Searc
 
         val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
 
-        this.mSearchView = menu?.findItem(R.id.search_menu)?.actionView as androidx.appcompat.widget.SearchView
+        this.mSearchView = menu?.findItem(R.id.action_search)?.actionView as androidx.appcompat.widget.SearchView
 
         this.mSearchView.apply {
             this.queryHint = "검색어를 입력해주세요."
