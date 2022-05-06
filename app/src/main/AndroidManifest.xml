@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dungeonans">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -22,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Activity.LoginActivity"/>
 
         <activity android:name=".Activity.RegisterActivity"
@@ -34,5 +31,4 @@
 
         <activity android:name=".Activity.FindAccountActivity"/>
     </application>
-
 </manifest>

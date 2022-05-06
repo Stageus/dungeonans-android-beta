@@ -2,8 +2,6 @@ package com.example.dungeonans.Activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dungeonans.Fragment.FindIdFragment
 import com.example.dungeonans.Fragment.FindPwFragment

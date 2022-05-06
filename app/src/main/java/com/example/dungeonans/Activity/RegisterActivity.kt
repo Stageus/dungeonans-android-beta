@@ -42,5 +42,4 @@ class RegisterActivity : AppCompatActivity() {
             Toast.makeText(this, text, Toast.LENGTH_LONG).show()
         }
     }
-
 }

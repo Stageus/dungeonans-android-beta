@@ -7,6 +7,7 @@
     <color name="lightWhite">#F2F2F2</color>
     <color name="lightBlue">#8CACFF</color>
     <color name="DarkBlue">#5777C9</color>
+    <color name="gray">#C5C5C5</color>
     <color name="grey">#C5C5C5</color>
     <color name="darkGrey">#737373</color>
     <color name="neoBlue">#52ACFF</color>
@@ -21,12 +22,6 @@
     <color name="hashtagPink">#FEC5FF</color>
     <color name="jsClicked">#CEBE29</color>
     <color name="kotlinClicked">#C0CDFF</color>
-    <color name="cssClicked">#FFA085</color>
-    <color name="flutterClicked">#007C6D</color>
-    <color name="htmlClicked">#BACBFF</color>
-    <color name="djangoClicked">#7DC9A9</color>
-    <color name="pythonClicked">#FFF4D1</color>
-    <color name="javaClicked">#E2ECF3</color>
     <color name="cClicked">#68B2F6</color>
     <color name="sqlClicked">#DAEEFD</color>
     <color name="rClicked">#E8E8E8</color>
@@ -37,6 +32,7 @@
     <color name="goClicked">#B5F0FF</color>
     <color name="scalaClicked">#FFC9C9</color>
     <color name="hashtagClicked">#8490F4</color>
+    <color name="cppClicked">#000000</color>
+    <color name="dartClicked">#000000</color>\
     <color name="transparent">#00000000</color>
-
 </resources>

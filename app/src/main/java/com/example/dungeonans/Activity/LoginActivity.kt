@@ -6,19 +6,14 @@ import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.dungeonans.Fragment.FindPwFragment
-import com.example.dungeonans.Fragment.LoginFragment
 import com.example.dungeonans.R
 import com.example.dungeonans.Utils.Constants.TAG
 import com.example.dungeonans.databinding.ActivityLoginBinding
-import com.example.dungeonans.databinding.ActivityMainBinding
 import com.navercorp.nid.NaverIdLoginSDK
 import com.navercorp.nid.oauth.NidOAuthLogin
 import com.navercorp.nid.oauth.OAuthLoginCallback
 import com.navercorp.nid.profile.NidProfileCallback
 import com.navercorp.nid.profile.data.NidProfileResponse
-import java.util.*
-import kotlin.math.roundToInt
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -163,16 +158,3 @@ class LoginActivity : AppCompatActivity() {
         })
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
