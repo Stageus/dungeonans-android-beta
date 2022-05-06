@@ -7,10 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver.OnScrollChangedListener
-import android.widget.ProgressBar
 import android.widget.RadioButton
 import android.widget.RadioGroup
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -110,3 +108,4 @@ class CommunityFragment : Fragment() {
         })
     }
 }
+

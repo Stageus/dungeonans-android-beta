@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dungeonans.Activity.ProfilePostActivity
 import com.example.dungeonans.Adapter.BlogCardViewAdapter
 import com.example.dungeonans.DataClass.BlogData
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.dungeonans.R
 
 
@@ -99,7 +100,4 @@ class MyProfileFragment : Fragment() {
         }
         return data
     }
-
-// 인스타 키기
-//
 }
