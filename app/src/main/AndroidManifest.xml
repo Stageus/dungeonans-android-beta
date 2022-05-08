@@ -29,6 +29,8 @@
 
         <activity android:name=".Activity.SearchResultActivity"/>
 
+        <activity android:name=".Activity.PostActivity"/>
+
         <activity android:name=".Activity.FindAccountActivity"/>
     </application>
 </manifest>

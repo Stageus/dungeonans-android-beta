@@ -1,11 +1,9 @@
 package com.example.dungeonans.Adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
-import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +12,6 @@ import com.example.dungeonans.BlogHolder.BlogHolder
 import com.example.dungeonans.Holder.Holder
 import com.example.dungeonans.R
 import kotlin.properties.Delegates
-
 
 class BlogCardViewAdapter : RecyclerView.Adapter<BlogHolder>() { // RecyclerView.Adapter를 사용하기 위해 상속
     var listData = mutableListOf<BlogData>() // 리스트 데이터를 전달받을 변수
@@ -40,7 +37,7 @@ class BlogCardViewAdapter : RecyclerView.Adapter<BlogHolder>() { // RecyclerView
 
     override fun onBindViewHolder(holder: BlogHolder, position: Int) {
         // 클릭 이벤트 처리
-        holder.itemView.findViewById<ImageView>(R.id.cardViewProfile).setOnClickListener{
+        holder.itemView.findViewById<ImageView>(R.id.replyCommentBtn).setOnClickListener{
             itemClickListener.onClick(it,position)
         }
 
