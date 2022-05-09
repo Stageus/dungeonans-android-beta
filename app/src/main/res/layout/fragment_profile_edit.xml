@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.UserProfileEditActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/backBtn"
+            android:id="@+id/back_btn"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
@@ -36,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="프로필 편집"
             android:textColor="@color/black"
-            android:textSize="23sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,6 +70,7 @@
                     android:textAlignment="viewStart"
                     />
                 <TextView
+                    android:id="@+id/profile_img_add_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="추가"
@@ -106,6 +108,7 @@
                     android:textAlignment="viewStart"
                     />
                 <TextView
+                    android:id="@+id/add_introduce_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="추가"
@@ -116,6 +119,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/introduce_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="회원님에 대해 설명해주세요..."
@@ -141,6 +145,7 @@
                     android:textAlignment="viewStart"
                     />
                 <TextView
+                    android:id="@+id/stack_add_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="추가"
@@ -175,14 +180,16 @@
                     android:layout_weight="1"
                     android:textAlignment="viewStart"
                     />
+
                 <TextView
+                    android:id="@+id/link_add_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="추가"
-                    android:textStyle="bold"
-                    android:textColor="@color/DeepDarkBlue"
                     android:layout_weight="1"
-                    android:textAlignment="viewEnd"/>
+                    android:text="추가"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/DeepDarkBlue"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <View

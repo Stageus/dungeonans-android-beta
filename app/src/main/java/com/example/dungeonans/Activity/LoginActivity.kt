@@ -94,7 +94,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginEvent() {
-        val loginIntent = Intent(this, SearchActivity::class.java) // 메인 페이지로 전환
+        val loginIntent = Intent(this, UserProfileEditActivity::class.java) // 메인 페이지로 전환
         startActivity(loginIntent)
     }
 

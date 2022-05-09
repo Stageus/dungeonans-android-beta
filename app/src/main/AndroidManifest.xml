@@ -30,5 +30,14 @@
         <activity android:name=".Activity.SearchResultActivity"/>
 
         <activity android:name=".Activity.FindAccountActivity"/>
+
+        <activity android:name=".Activity.UserProfileActivity"/>
+
+        <activity android:name=".Activity.UserProfileEditActivity"/>
+
+        <activity android:name=".Activity.MainActivity"/>
+
+
+
     </application>
 </manifest>
