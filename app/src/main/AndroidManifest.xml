@@ -32,5 +32,8 @@
         <activity android:name=".Activity.PostActivity"/>
 
         <activity android:name=".Activity.FindAccountActivity"/>
+
+        <activity android:name=".Activity.AnswerActivity"/>
+
     </application>
 </manifest>
