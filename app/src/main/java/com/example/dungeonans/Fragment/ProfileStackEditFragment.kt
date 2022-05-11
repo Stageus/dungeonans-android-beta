@@ -12,12 +12,18 @@ import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import com.example.dungeonans.Activity.UserProfileEditActivity
 import com.example.dungeonans.R
+import com.example.dungeonans.databinding.FragmentEditStackBinding
+import com.example.dungeonans.databinding.FragmentLinkEditBinding
 import kotlinx.android.synthetic.main.fragment_edit_stack.*
 
 class ProfileStackEditFragment : Fragment() {
 
+    private var _binding: FragmentEditStackBinding? = null
+    private val binding get() = _binding!!
+
     private lateinit var profileActivity : UserProfileEditActivity
     val btnIdxArrayList = arrayListOf<Int>()
+
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -29,31 +35,31 @@ class ProfileStackEditFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_edit_stack, container, false)
+        _binding = FragmentEditStackBinding.inflate(inflater, container, false)
+        val view = binding.root
 
-        back_btn.setOnClickListener {
-            profileActivity.transFragEvent(0)
+        binding.backBtn.setOnClickListener {
+            //profileActivity.transFragEvent(0)
         }
 
-        add_custom_stack_btn.setOnClickListener {  // 커스텀 스택 추가
+        binding.addCustomStackBtn.setOnClickListener {  // 커스텀 스택 추가
             addCustomStack()
         }
 
-        val radioBtnId = stack_radio_group.checkedRadioButtonId
-        val radioBtn = stack_radio_group.findViewById<RadioButton>(radioBtnId)
+        val radioBtnId = binding.stackRadioGroup.checkedRadioButtonId
+        val radioBtn = binding.stackRadioGroup.findViewById<RadioButton>(radioBtnId)
 
-        confirm_stack_btn.isEnabled = radioBtn.isChecked
+        binding.confirmStackBtn.isEnabled = radioBtn.isChecked
 
         //val index: Int = stack_radio_group.indexOfChild(stack_radio_group.findViewById<RadioButton>(stack_radio_group.checkedRadioButtonId))
 
-        stack_radio_group.setOnCheckedChangeListener { _, checkedId ->
+        binding.stackRadioGroup.setOnCheckedChangeListener { _, checkedId ->
             Log.d("TAG", "$checkedId")
             if (checkedId in btnIdxArrayList)
                 btnIdxArrayList.remove(checkedId)
             else
                 btnIdxArrayList.add(checkedId)
         }
-
 
         return view
     }
@@ -63,6 +69,11 @@ class ProfileStackEditFragment : Fragment() {
             .setView(R.layout.dialog_custom_stack)
             .setCancelable(true)
             .show()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }

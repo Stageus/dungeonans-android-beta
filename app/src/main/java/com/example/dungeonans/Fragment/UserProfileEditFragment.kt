@@ -29,26 +29,28 @@ class UserProfileEditFragment : Fragment() {
         _binding = FragmentProfileEditBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        binding.introduceTv.text = arguments?.getString("introduce")
+
 
         binding.backBtn.setOnClickListener { // 뒤로가기
-            profileActivity.transFragEvent(10)
+           profileActivity.moveBackEvent()
         }
 
         binding.profileImgAddTv.setOnClickListener { // 프로필 사진 수정
-            profileActivity.transFragEvent(1)
+            //profileActivity.transFragEvent(1)
         }
 
         binding.addIntroduceTv.setOnClickListener { // 프로필 소개 수정
-            profileActivity.transFragEvent(2)
+            profileActivity.transFragEvent(ProfileIntroduceEditFragment())
         }
 
         binding.stackAddTv.setOnClickListener { // 기술 스택 수정
-            profileActivity.transFragEvent(3)
+            //profileActivity.transFragEvent(3)
 
         }
 
         binding.linkAddTv.setOnClickListener { // 링크 수정
-            profileActivity.transFragEvent(4)
+            profileActivity.transFragEvent(ProfileLinkEditFragment())
 
         }
         return view

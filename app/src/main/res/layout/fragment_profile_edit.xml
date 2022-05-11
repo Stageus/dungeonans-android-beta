@@ -120,8 +120,11 @@
 
             <TextView
                 android:id="@+id/introduce_tv"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textAlignment="center"
                 android:text="회원님에 대해 설명해주세요..."
                 android:layout_marginBottom="20dp"
                 android:layout_gravity="center_horizontal"/>

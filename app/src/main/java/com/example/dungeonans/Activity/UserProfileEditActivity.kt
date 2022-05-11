@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.dungeonans.Fragment.*
 import com.example.dungeonans.R
 
@@ -25,27 +26,18 @@ class UserProfileEditActivity : AppCompatActivity() {
 
     }
 
-    fun transFragEvent(transNum : Int) {
-        val transaction = this.supportFragmentManager.beginTransaction()
-        val profileFrag = UserProfileEditFragment()
-        val imgFrag = ProfileImgFragment()
-        val introduceFrag = ProfileIntroduceEditFragment()
-        val stackFrag = ProfileStackEditFragment()
-        val linkFrag = ProfileLinkEditFragment()
-
-        when(transNum) {
-            0 -> transaction.replace(R.id.emptyLayout, profileFrag)
-            1 -> transaction.replace(R.id.emptyLayout, imgFrag)
-            2 -> transaction.replace(R.id.emptyLayout, introduceFrag)
-            3 -> transaction.replace(R.id.emptyLayout, stackFrag)
-            4 -> transaction.replace(R.id.emptyLayout, linkFrag)
-            10 -> {
-                val loginIntent = Intent(this, MainActivity::class.java) // 메인 페이지로 전환
-                startActivity(loginIntent)
-            }
-        }
-        transaction.commit()
+    fun transFragEvent(mFrag : Fragment) {
+        this.supportFragmentManager.beginTransaction().replace(
+            R.id.emptyLayout,
+            mFrag
+        ).commit()
     }
+
+    fun moveBackEvent() {
+        val loginIntent = Intent(this, MainActivity::class.java) // 메인 페이지로 전환
+        startActivity(loginIntent)
+    }
+
     private fun editAccountStack() {
         AlertDialog.Builder(this)
             .setView(R.layout.fragment_edit_stack)
