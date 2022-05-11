@@ -158,28 +158,34 @@
         <entry key="app/src/main/res/drawable/hashtagclicked.xml" value="0.196" />
         <entry key="app/src/main/res/drawable/login_text_stroke.xml" value="0.196" />
         <entry key="app/src/main/res/drawable/menu_selector_color.xml" value="0.196" />
+        <entry key="app/src/main/res/drawable/pythontag.xml" value="0.2145" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22801450589301903" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13697916666666668" />
         <entry key="app/src/main/res/layout/activity_profile_edit.xml" value="0.47893066406249996" />
         <entry key="app/src/main/res/layout/activity_search_result.xml" value="0.16193063100710406" />
         <entry key="app/src/main/res/layout/ask_allpost_cardview.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/ask_default_fragment.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/layout/ask_head_fragment.xml" value="0.5580620141455434" />
         <entry key="app/src/main/res/layout/askpage_fragment.xml" value="0.3836578369140625" />
         <entry key="app/src/main/res/layout/askpage_viewall_fragment.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/best_user_cardview.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/blogpage_fragment.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/comment_cardview.xml" value="0.16193063100710406" />
         <entry key="app/src/main/res/layout/communitypage_fragment.xml" value="0.234375" />
-        <entry key="app/src/main/res/layout/dialog_custom_stack.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/layout/custom_stack_layout.xml" value="0.31936725096194957" />
+        <entry key="app/src/main/res/layout/dialog_custom_stack.xml" value="0.5" />
         <entry key="app/src/main/res/layout/dialog_edit_account.xml" value="0.10029498525073746" />
         <entry key="app/src/main/res/layout/dialog_edit_introduce.xml" value="0.33" />
         <entry key="app/src/main/res/layout/dialog_edit_stack.xml" value="0.33" />
         <entry key="app/src/main/res/layout/findaccount_dialog_layout.xml" value="0.16193063100710406" />
         <entry key="app/src/main/res/layout/findid_fragment_layout.xml" value="0.16193063100710406" />
+        <entry key="app/src/main/res/layout/fragment_edit_introduce.xml" value="0.31936725096194957" />
         <entry key="app/src/main/res/layout/fragment_edit_stack.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_link_edit.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/fragment_profile_edit.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_register_complete.xml" value="0.14855829502716256" />
+        <entry key="app/src/main/res/layout/fragment_register_confirm.xml" value="0.16193063100710406" />
+        <entry key="app/src/main/res/layout/fragment_register_terms.xml" value="0.16193063100710406" />
         <entry key="app/src/main/res/layout/item_spinner_link.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/loginpage_fragment.xml" value="0.27442413330078125" />
         <entry key="app/src/main/res/layout/myprofilepage_fragment.xml" value="0.234375" />

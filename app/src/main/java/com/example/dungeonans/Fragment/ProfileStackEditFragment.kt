@@ -3,18 +3,20 @@ package com.example.dungeonans.Fragment
 import android.app.AlertDialog
 import android.content.Context
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RadioButton
-import android.widget.RadioGroup
+import android.widget.*
 import androidx.fragment.app.Fragment
 import com.example.dungeonans.Activity.UserProfileEditActivity
 import com.example.dungeonans.R
 import com.example.dungeonans.databinding.FragmentEditStackBinding
-import com.example.dungeonans.databinding.FragmentLinkEditBinding
+import kotlinx.android.synthetic.main.dialog_custom_stack.*
 import kotlinx.android.synthetic.main.fragment_edit_stack.*
+
 
 class ProfileStackEditFragment : Fragment() {
 
@@ -22,7 +24,8 @@ class ProfileStackEditFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var profileActivity : UserProfileEditActivity
-    val btnIdxArrayList = arrayListOf<Int>()
+    private val btnIdxArrayList = arrayListOf<Int>()
+    private val customBtnList = arrayListOf<String>()
 
 
     override fun onAttach(context: Context) {
@@ -34,7 +37,7 @@ class ProfileStackEditFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentEditStackBinding.inflate(inflater, container, false)
         val view = binding.root
 
@@ -64,11 +67,41 @@ class ProfileStackEditFragment : Fragment() {
         return view
     }
 
+    private fun setCustomStack() {
+
+        val radioButton = RadioButton(profileActivity)
+        radioButton.text = ""
+        radioButton.id = View.generateViewId()
+
+        binding.stackRadioGroup.addView(radioButton)
+
+    }
+
+
     private fun addCustomStack() {
         AlertDialog.Builder(profileActivity)
             .setView(R.layout.dialog_custom_stack)
             .setCancelable(true)
             .show()
+
+            .also { alertDialog ->
+                if (alertDialog == null) {
+                    return@also
+                }
+                confirm_btn.addTextChangedListener(object : TextWatcher{
+                    override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) = Unit
+
+                    override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                        confirm_btn.isEnabled = custom_stack_et.text != null
+                    }
+
+                    override fun afterTextChanged(p0: Editable?) = Unit
+                })
+
+                confirm_btn.setOnClickListener {
+
+                }
+            }
     }
 
     override fun onDestroyView() {
@@ -77,3 +110,5 @@ class ProfileStackEditFragment : Fragment() {
     }
 
 }
+
+

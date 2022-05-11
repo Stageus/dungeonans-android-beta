@@ -25,19 +25,16 @@ class UserProfileEditFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentProfileEditBinding.inflate(inflater, container, false)
         val view = binding.root
-
-        binding.introduceTv.text = arguments?.getString("introduce")
-
 
         binding.backBtn.setOnClickListener { // 뒤로가기
            profileActivity.moveBackEvent()
         }
 
         binding.profileImgAddTv.setOnClickListener { // 프로필 사진 수정
-            //profileActivity.transFragEvent(1)
+            profileActivity.transFragEvent(ProfileImgFragment())
         }
 
         binding.addIntroduceTv.setOnClickListener { // 프로필 소개 수정
@@ -45,15 +42,23 @@ class UserProfileEditFragment : Fragment() {
         }
 
         binding.stackAddTv.setOnClickListener { // 기술 스택 수정
-            //profileActivity.transFragEvent(3)
-
+            profileActivity.transFragEvent(ProfileStackEditFragment())
         }
 
         binding.linkAddTv.setOnClickListener { // 링크 수정
             profileActivity.transFragEvent(ProfileLinkEditFragment())
-
         }
+
+        setProfile() // 프로필 기본 세팅
+
         return view
+    }
+
+    private fun setProfile() {
+        if (arguments?.getString("introduce") != null) {
+            binding.introduceTv.text = arguments?.getString("introduce")
+        }
+
     }
 
     override fun onDestroyView() {
