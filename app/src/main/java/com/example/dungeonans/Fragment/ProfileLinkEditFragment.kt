@@ -38,7 +38,9 @@ class ProfileLinkEditFragment: Fragment() {
         _binding = FragmentLinkEditBinding.inflate(inflater, container, false)
         val view = binding.root
 
-
+        binding.backBtn.setOnClickListener {
+            profileActivity.transFragEvent(UserProfileEditFragment())
+        }
 
         setupSpinnerLink()
         setupSpinnerHandler()
@@ -67,8 +69,7 @@ class ProfileLinkEditFragment: Fragment() {
                 }
             }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-            }
+            override fun onNothingSelected(p0: AdapterView<*>?) = Unit
         }
     }
 

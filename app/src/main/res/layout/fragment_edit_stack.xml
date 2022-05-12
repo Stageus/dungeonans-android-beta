@@ -53,10 +53,9 @@
         android:layout_height="wrap_content"
         android:background="@color/lightGrey">
 
-        <RadioGroup
-            android:id="@+id/stack_radio_group"
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RadioButton
@@ -64,7 +63,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:button="@null"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:elevation="20dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/pythontag"/>
@@ -74,6 +73,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:button="@null"
+                android:layout_margin="5dp"
                 android:elevation="20dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/kotlintag"/>
@@ -83,7 +83,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:button="@null"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:elevation="20dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/androidtag"/>
@@ -93,6 +93,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:elevation="20dp"
+                android:layout_margin="5dp"
                 android:button="@null"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/htmltag"/>
@@ -102,7 +103,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:button="@null"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:elevation="20dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/csstag"/>
@@ -112,6 +113,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:button="@null"
+                android:layout_margin="5dp"
                 android:elevation="20dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/jstag"/>
@@ -122,7 +124,7 @@
                 android:layout_height="50dp"
                 android:elevation="20dp"
                 android:button="@null"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/javatag"/>
 
@@ -131,6 +133,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:button="@null"
+                android:layout_margin="5dp"
                 android:elevation="20dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/cpptag"/>
@@ -140,7 +143,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:button="@null"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:elevation="20dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/sqltag"/>
@@ -149,6 +152,7 @@
                 android:id="@+id/radio10"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:elevation="20dp"
                 android:button="@null"
                 android:layout_gravity="center_vertical"
@@ -160,7 +164,7 @@
                 android:layout_height="50dp"
                 android:elevation="20dp"
                 android:button="@null"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/phptag"/>
 
@@ -168,6 +172,7 @@
                 android:id="@+id/radio12"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:button="@null"
                 android:elevation="20dp"
                 android:layout_gravity="center_vertical"
@@ -177,9 +182,9 @@
                 android:id="@+id/radio13"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:button="@null"
                 android:elevation="20dp"
-                android:layout_margin="10dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/csharptag"/>
 
@@ -187,6 +192,7 @@
                 android:id="@+id/radio14"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_margin="5dp"
                 android:button="@null"
                 android:elevation="20dp"
                 android:layout_gravity="center_vertical"
@@ -198,7 +204,7 @@
                 android:layout_height="50dp"
                 android:button="@null"
                 android:elevation="20dp"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/scalatag"/>
 
@@ -208,6 +214,7 @@
                 android:layout_height="50dp"
                 android:button="@null"
                 android:elevation="20dp"
+                android:layout_margin="5dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/darttag"/>
 
@@ -229,20 +236,49 @@
                 android:elevation="20dp"
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/djangotag"/>
-        </RadioGroup>
+
+        </LinearLayout>
+
     </HorizontalScrollView>
 
     <HorizontalScrollView
-        android:id="@+id/custom_stack_horizantal_"
+        android:id="@+id/custom_stack_horizantal"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="none"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:overScrollMode="ifContentScrolls"
-        android:layout_height="wrap_content"
         android:background="@color/lightGrey">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radi12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:button="@null"
+                android:elevation="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/djangotag"/>
+
+            <RadioButton
+                android:id="@+id/radi122"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:button="@null"
+                android:elevation="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/djangotag"/>
+
+        </LinearLayout>
+
+
     </HorizontalScrollView>
+
+
 
     <FrameLayout
         android:layout_width="wrap_content"

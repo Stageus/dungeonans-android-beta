@@ -102,6 +102,8 @@ class LoginActivity : AppCompatActivity() {
 
     private fun loginEvent() {
         connectLoginApi()
+//        val loginIntent = Intent(this@LoginActivity, UserProfileEditActivity::class.java) // 메인 페이지로 전환
+//        startActivity(loginIntent)
     }
 
     private fun findExistingAccountEvent() {
@@ -163,7 +165,7 @@ class LoginActivity : AppCompatActivity() {
                 Log.d("TAG" , "errmsg : ${response.body()?.errmsg}")
                 Log.d("TAG", "id ${response.body()?.token}")
                 if (response.body()?.success == true) {
-                    val loginIntent = Intent(LoginActivity(), UserProfileEditActivity::class.java) // 메인 페이지로 전환
+                    val loginIntent = Intent(this@LoginActivity, UserProfileEditActivity::class.java) // 메인 페이지로 전환
                     startActivity(loginIntent)
                 }
             }

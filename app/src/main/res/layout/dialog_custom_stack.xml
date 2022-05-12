@@ -23,8 +23,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:textSize="10sp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:hint="택스트 힌트"
         app:layout_constraintTop_toBottomOf="@id/info_tv"
         android:maxLength="10"
+        android:singleLine="true"
         android:background="@drawable/login_text_stroke"/>
 
     <ImageView
@@ -50,12 +57,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/custom_warning_iv"/>
-
-
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

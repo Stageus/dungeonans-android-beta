@@ -58,7 +58,10 @@ class UserProfileEditFragment : Fragment() {
         if (arguments?.getString("introduce") != null) {
             binding.introduceTv.text = arguments?.getString("introduce")
         }
+    }
 
+    fun connectProfileEditApi() {
+        // api 통신을 통해 기존에 유저 정보 가져오기
     }
 
     override fun onDestroyView() {
