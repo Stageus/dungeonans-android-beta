@@ -1,10 +1,11 @@
-package com.example.dungeonans.recylcerview
+package com.example.dungeonans.Adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dungeonans.BlogData
 import com.example.dungeonans.R
+import com.example.dungeonans.Holder.BlogItemViewHolder
 
 class BlogGridViewRecyclerViewAdapter : RecyclerView.Adapter<BlogItemViewHolder>() {
 

@@ -1,20 +1,28 @@
 package com.example.dungeonans.Retrofit
 
+import android.content.Context
 import android.os.Looper
 import android.util.Log
 import android.widget.Toast
 import com.example.dungeonans.App
+import com.example.dungeonans.BuildConfig
 import com.example.dungeonans.Utils.API
 import com.example.dungeonans.Utils.Constants.TAG
 import com.example.dungeonans.Utils.isJsonArray
 import com.example.dungeonans.Utils.isJsonObject
+import com.google.gson.Gson
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import org.json.JSONObject
+import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Query
 import java.util.concurrent.TimeUnit
 import java.util.logging.Handler
 
@@ -28,7 +36,6 @@ object RetrofitClient {
 
     // 레트로핏 클라이언트 가져오기
     fun getClient(baseUrl: String): Retrofit? {
-        Log.d(TAG, "RetrofitClient - getClient() called")
 
         // okhttp 인스턴스 생성
         val client = OkHttpClient.Builder()
@@ -120,5 +127,36 @@ object RetrofitClient {
         return retrofitClient
     }
 
+    fun initClient() : Retrofit {
+        val url = BuildConfig.SERVER_URL //서버 주소
+        val gson = Gson()                   // 서버와 주고 받을 데이터 형식
+        val clientBuilder = OkHttpClient.Builder().build()
 
+        val connection = Retrofit.Builder()
+            .baseUrl(url)
+            .client(clientBuilder)
+            .addConverterFactory(GsonConverterFactory.create(gson))
+            .build()
+
+        return connection
+    }
+}
+
+data class LoginData(
+    val id: String,
+    val pw : String
+)
+
+data class LoginResponse(
+    val errmsg: String,
+    val success : Boolean,
+    val token : String
+)
+
+interface LoginApi {
+    @POST("/account/login")
+
+    fun postLogin(
+        @Body loginData : LoginData
+    ) :Call<LoginResponse>
 }

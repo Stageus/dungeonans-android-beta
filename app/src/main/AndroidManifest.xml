@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dungeonans">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -9,7 +11,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_dungeonans_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Dungeonans.Material">
+        android:theme="@style/Theme.Dungeonans.Material"
+        android:usesCleartextTraffic="true">
 
         <activity
             android:name=".Activity.SplashActivity"
@@ -20,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".Activity.LoginActivity"/>
 
         <activity android:name=".Activity.RegisterActivity"
@@ -27,13 +31,11 @@
 
         <activity android:name=".Activity.SearchActivity"/>
 
-        <activity android:name=".Activity.SearchResultActivity"/>
+        <activity android:name=".Activity.SearchBlogActivity"/>
 
         <activity android:name=".Activity.PostActivity"/>
 
         <activity android:name=".Activity.FindAccountActivity"/>
-
-        <activity android:name=".Activity.AnswerActivity"/>
 
     </application>
 </manifest>
