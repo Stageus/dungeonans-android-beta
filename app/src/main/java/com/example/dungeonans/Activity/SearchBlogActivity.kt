@@ -26,15 +26,14 @@ import kotlinx.android.synthetic.main.activity_search_result.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-class SearchResultActivity: AppCompatActivity(), androidx.appcompat.widget.SearchView.OnQueryTextListener{
+class SearchResultActivity: AppCompatActivity(),
+    androidx.appcompat.widget.SearchView.OnQueryTextListener {
 
     // 데이터
     var photoList = ArrayList<BlogData>()
+    
     // 어뎁터
     private lateinit var blogGridRecyclerViewAdapter: BlogGridViewRecyclerViewAdapter
-
-    // 서치뷰
-    //private lateinit var mSearchView: androidx.appcompat.widget.SearchView
 
     // 서치뷰 ET
     private lateinit var mSearchViewET : EditText
