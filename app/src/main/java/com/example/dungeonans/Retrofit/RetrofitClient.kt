@@ -36,7 +36,6 @@ object RetrofitClient {
 
     // 레트로핏 클라이언트 가져오기
     fun getClient(baseUrl: String): Retrofit? {
-        Log.d(TAG, "RetrofitClient - getClient() called")
 
         // okhttp 인스턴스 생성
         val client = OkHttpClient.Builder()

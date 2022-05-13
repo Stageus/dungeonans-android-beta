@@ -62,8 +62,10 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_search -> {
-                val intent = Intent(this, SearchResultActivity::class.java)
-                startActivity(intent)
+                if (binding.pager.currentItem == 2) {
+                    val intent = Intent(this, SearchBlogActivity::class.java)
+                    startActivity(intent)
+                }
                 true
             }
             R.id.action_share -> {

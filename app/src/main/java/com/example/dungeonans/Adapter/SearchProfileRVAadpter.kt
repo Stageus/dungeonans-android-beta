@@ -1,4 +1,4 @@
 package com.example.dungeonans.Adapter
 
-class SearchProfileRVAadpter {
+class SearchProfileRVAadpter  {
 }

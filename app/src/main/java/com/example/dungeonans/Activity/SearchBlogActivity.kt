@@ -3,13 +3,11 @@ package com.example.dungeonans.Activity
 import android.annotation.SuppressLint
 import android.app.SearchManager
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.InputFilter
 import android.util.Log
 import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -21,17 +19,17 @@ import com.example.dungeonans.Retrofit.RetrofitManager
 import com.example.dungeonans.Utils.Constants.TAG
 import com.example.dungeonans.Utils.PrefManager
 import com.example.dungeonans.Utils.RESPONSE_STATUS
-import com.example.dungeonans.recylcerview.BlogGridViewRecyclerViewAdapter
+import com.example.dungeonans.Adapter.BlogGridViewRecyclerViewAdapter
 import kotlinx.android.synthetic.main.activity_search_result.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-class SearchResultActivity: AppCompatActivity(),
+class SearchBlogActivity: AppCompatActivity(),
     androidx.appcompat.widget.SearchView.OnQueryTextListener {
 
     // 데이터
     var photoList = ArrayList<BlogData>()
-    
+
     // 어뎁터
     private lateinit var blogGridRecyclerViewAdapter: BlogGridViewRecyclerViewAdapter
 
@@ -80,7 +78,7 @@ class SearchResultActivity: AppCompatActivity(),
 //            this.isFocusable = true
             this.requestFocusFromTouch()
 
-            this.setOnQueryTextListener(this@SearchResultActivity)
+            this.setOnQueryTextListener(this@SearchBlogActivity)
 
             this.setOnQueryTextFocusChangeListener { _, hasExpanded ->
                 when(hasExpanded) {

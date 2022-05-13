@@ -162,13 +162,14 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.22801450589301903" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3590403238932292" />
         <entry key="app/src/main/res/layout/activity_profile_edit.xml" value="0.47893066406249996" />
-        <entry key="app/src/main/res/layout/activity_search_result.xml" value="0.16193063100710406" />
+        <entry key="app/src/main/res/layout/activity_search_result.xml" value="0.25" />
         <entry key="app/src/main/res/layout/ask_allpost_cardview.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/ask_default_fragment.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/ask_head_fragment.xml" value="0.5580620141455434" />
         <entry key="app/src/main/res/layout/askpage_fragment.xml" value="0.3836578369140625" />
         <entry key="app/src/main/res/layout/askpage_viewall_fragment.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/best_user_cardview.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/layout/blog_cardview.xml" value="0.30867892261650276" />
         <entry key="app/src/main/res/layout/blogpage_fragment.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/comment_cardview.xml" value="0.16193063100710406" />
         <entry key="app/src/main/res/layout/communitypage_fragment.xml" value="0.234375" />
@@ -177,6 +178,7 @@
         <entry key="app/src/main/res/layout/dialog_edit_account.xml" value="0.10029498525073746" />
         <entry key="app/src/main/res/layout/dialog_edit_introduce.xml" value="0.33" />
         <entry key="app/src/main/res/layout/dialog_edit_stack.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/empty_layout.xml" value="0.2543822146216332" />
         <entry key="app/src/main/res/layout/findaccount_dialog_layout.xml" value="0.16193063100710406" />
         <entry key="app/src/main/res/layout/findid_fragment_layout.xml" value="0.16193063100710406" />
         <entry key="app/src/main/res/layout/findpw_fragment_layout.xml" value="0.10447137484329294" />
@@ -187,12 +189,16 @@
         <entry key="app/src/main/res/layout/fragment_register_complete.xml" value="0.14855829502716256" />
         <entry key="app/src/main/res/layout/fragment_register_confirm.xml" value="0.16193063100710406" />
         <entry key="app/src/main/res/layout/fragment_register_terms.xml" value="0.16193063100710406" />
+        <entry key="app/src/main/res/layout/hashtag_button.xml" value="0.30867892261650276" />
+        <entry key="app/src/main/res/layout/hashtag_radiobutton.xml" value="0.30867892261650276" />
+        <entry key="app/src/main/res/layout/item_post_search.xml" value="0.5296" />
         <entry key="app/src/main/res/layout/item_spinner_link.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/loginpage_fragment.xml" value="0.27442413330078125" />
         <entry key="app/src/main/res/layout/myprofilepage_fragment.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/notice_cardview.xml" value="0.30867892261650276" />
         <entry key="app/src/main/res/layout/noticepage_activity.xml" value="0.234375" />
-        <entry key="app/src/main/res/layout/post_cardview.xml" value="0.21376656690893545" />
+        <entry key="app/src/main/res/layout/other_profile_activity.xml" value="0.30867892261650276" />
+        <entry key="app/src/main/res/layout/post_cardview.xml" value="0.33" />
         <entry key="app/src/main/res/layout/profile_allmycomment_fragment.xml" value="0.33133817870884996" />
         <entry key="app/src/main/res/layout/profile_allmypost_fragment.xml" value="0.21376656690893545" />
         <entry key="app/src/main/res/layout/profilepage_bottom_drawer.xml" value="0.21376656690893545" />
