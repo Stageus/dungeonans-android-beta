@@ -101,9 +101,9 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginEvent() {
-        connectLoginApi()
-//        val loginIntent = Intent(this@LoginActivity, UserProfileEditActivity::class.java) // 메인 페이지로 전환
-//        startActivity(loginIntent)
+        //connectLoginApi()
+        val loginIntent = Intent(this@LoginActivity, MainActivity::class.java) // 메인 페이지로 전환
+        startActivity(loginIntent)
     }
 
     private fun findExistingAccountEvent() {
